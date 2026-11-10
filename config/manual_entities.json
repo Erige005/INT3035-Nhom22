@@ -1,0 +1,1228 @@
+{
+  "_note": "Danh sách bổ sung thủ công cho từ điển thực thể (nhãn hàng, giải thưởng, sự kiện, công ty). Định dạng: tên chuẩn -> danh sách bí danh.",
+  "Brand": {
+    "Louis Vuitton": [
+      "LV",
+      "Louis Vuitton"
+    ],
+    "Chanel": [
+      "Chanel"
+    ],
+    "Dior": [
+      "Dior",
+      "Christian Dior"
+    ],
+    "Gucci": [
+      "Gucci"
+    ],
+    "Prada": [
+      "Prada"
+    ],
+    "Celine": [
+      "Celine",
+      "Céline"
+    ],
+    "Saint Laurent": [
+      "Saint Laurent",
+      "YSL",
+      "Yves Saint Laurent"
+    ],
+    "Givenchy": [
+      "Givenchy"
+    ],
+    "Fendi": [
+      "Fendi"
+    ],
+    "Valentino": [
+      "Valentino"
+    ],
+    "Balenciaga": [
+      "Balenciaga"
+    ],
+    "Burberry": [
+      "Burberry"
+    ],
+    "Bottega Veneta": [
+      "Bottega Veneta"
+    ],
+    "Loewe": [
+      "Loewe"
+    ],
+    "Miu Miu": [
+      "Miu Miu"
+    ],
+    "Versace": [
+      "Versace"
+    ],
+    "Hermès": [
+      "Hermès",
+      "Hermes"
+    ],
+    "Alexander McQueen": [
+      "Alexander McQueen"
+    ],
+    "Chloé": [
+      "Chloé",
+      "Chloe"
+    ],
+    "Ferragamo": [
+      "Ferragamo",
+      "Salvatore Ferragamo"
+    ],
+    "Jimmy Choo": [
+      "Jimmy Choo"
+    ],
+    "Moschino": [
+      "Moschino"
+    ],
+    "Marc Jacobs": [
+      "Marc Jacobs"
+    ],
+    "Michael Kors": [
+      "Michael Kors"
+    ],
+    "Coach": [
+      "Coach"
+    ],
+    "Tommy Hilfiger": [
+      "Tommy Hilfiger"
+    ],
+    "Calvin Klein": [
+      "Calvin Klein"
+    ],
+    "Ralph Lauren": [
+      "Ralph Lauren"
+    ],
+    "Diesel": [
+      "Diesel"
+    ],
+    "Tory Burch": [
+      "Tory Burch"
+    ],
+    "Jacquemus": [
+      "Jacquemus"
+    ],
+    "Mugler": [
+      "Mugler"
+    ],
+    "Off-White": [
+      "Off-White"
+    ],
+    "Tiffany & Co.": [
+      "Tiffany & Co.",
+      "Tiffany & Co",
+      "Tiffany and Co"
+    ],
+    "Cartier": [
+      "Cartier"
+    ],
+    "Bulgari": [
+      "Bulgari",
+      "Bvlgari"
+    ],
+    "Van Cleef & Arpels": [
+      "Van Cleef & Arpels"
+    ],
+    "Chaumet": [
+      "Chaumet"
+    ],
+    "Boucheron": [
+      "Boucheron"
+    ],
+    "Pandora": [
+      "Pandora"
+    ],
+    "Swarovski": [
+      "Swarovski"
+    ],
+    "Piaget": [
+      "Piaget"
+    ],
+    "Omega": [
+      "Omega"
+    ],
+    "Rolex": [
+      "Rolex"
+    ],
+    "TAG Heuer": [
+      "TAG Heuer"
+    ],
+    "Hublot": [
+      "Hublot"
+    ],
+    "Montblanc": [
+      "Montblanc"
+    ],
+    "Rimowa": [
+      "Rimowa"
+    ],
+    "Lancôme": [
+      "Lancôme",
+      "Lancome"
+    ],
+    "Estée Lauder": [
+      "Estée Lauder",
+      "Estee Lauder"
+    ],
+    "Clinique": [
+      "Clinique"
+    ],
+    "MAC Cosmetics": [
+      "MAC Cosmetics"
+    ],
+    "Sulwhasoo": [
+      "Sulwhasoo"
+    ],
+    "Laneige": [
+      "Laneige"
+    ],
+    "Innisfree": [
+      "Innisfree"
+    ],
+    "Shiseido": [
+      "Shiseido"
+    ],
+    "Kiehl's": [
+      "Kiehl's",
+      "Kiehls"
+    ],
+    "L'Oréal": [
+      "L'Oréal",
+      "L'Oreal",
+      "Loreal"
+    ],
+    "Maybelline": [
+      "Maybelline"
+    ],
+    "Fenty Beauty": [
+      "Fenty Beauty"
+    ],
+    "Sephora": [
+      "Sephora"
+    ],
+    "Hera": [
+      "Hera Cosmetics"
+    ],
+    "Nike": [
+      "Nike"
+    ],
+    "Adidas": [
+      "Adidas",
+      "adidas"
+    ],
+    "Puma": [
+      "Puma",
+      "PUMA"
+    ],
+    "New Balance": [
+      "New Balance"
+    ],
+    "Converse": [
+      "Converse"
+    ],
+    "Fila": [
+      "Fila",
+      "FILA"
+    ],
+    "Lululemon": [
+      "Lululemon"
+    ],
+    "Under Armour": [
+      "Under Armour"
+    ],
+    "Crocs": [
+      "Crocs"
+    ],
+    "Uniqlo": [
+      "Uniqlo"
+    ],
+    "Zara": [
+      "Zara"
+    ],
+    "H&M": [
+      "H&M"
+    ],
+    "Levi's": [
+      "Levi's",
+      "Levis"
+    ],
+    "Samsung": [
+      "Samsung",
+      "Samsung Electronics"
+    ],
+    "Apple": [
+      "Apple"
+    ],
+    "LG": [
+      "LG Electronics"
+    ],
+    "Hyundai": [
+      "Hyundai",
+      "Hyundai Motor"
+    ],
+    "Kia": [
+      "Kia"
+    ],
+    "BMW": [
+      "BMW"
+    ],
+    "Mercedes-Benz": [
+      "Mercedes-Benz",
+      "Mercedes"
+    ],
+    "Porsche": [
+      "Porsche"
+    ],
+    "Pepsi": [
+      "Pepsi",
+      "PepsiCo"
+    ],
+    "Coca-Cola": [
+      "Coca-Cola",
+      "Coke"
+    ],
+    "Starbucks": [
+      "Starbucks"
+    ],
+    "McDonald's": [
+      "McDonald's",
+      "McDonalds"
+    ],
+    "Burger King": [
+      "Burger King"
+    ],
+    "KFC": [
+      "KFC"
+    ],
+    "Lotte": [
+      "Lotte"
+    ],
+    "Shopee": [
+      "Shopee"
+    ],
+    "Lazada": [
+      "Lazada"
+    ],
+    "Grab": [
+      "Grab"
+    ],
+    "Oppo": [
+      "OPPO",
+      "Oppo"
+    ],
+    "Vivo": [
+      "vivo",
+      "Vivo"
+    ],
+    "Xiaomi": [
+      "Xiaomi"
+    ],
+    "Pokémon": [
+      "Pokémon",
+      "Pokemon"
+    ],
+    "Red Bull": [
+      "Red Bull"
+    ],
+    "Victoria's Secret": [
+      "Victoria's Secret"
+    ],
+    "Skims": [
+      "Skims",
+      "SKIMS"
+    ],
+    "Rare Beauty": [
+      "Rare Beauty"
+    ],
+    "Savage X Fenty": [
+      "Savage X Fenty"
+    ],
+    "Gentle Monster": [
+      "Gentle Monster"
+    ],
+    "Jo Malone": [
+      "Jo Malone"
+    ],
+    "Armani": [
+      "Armani",
+      "Giorgio Armani",
+      "Emporio Armani"
+    ],
+    "Dolce & Gabbana": [
+      "Dolce & Gabbana",
+      "Dolce&Gabbana",
+      "D&G"
+    ],
+    "Tod's": [
+      "Tod's"
+    ],
+    "Max Mara": [
+      "Max Mara"
+    ],
+    "Ami Paris": [
+      "Ami Paris"
+    ],
+    "Marni": [
+      "Marni"
+    ],
+    "Lacoste": [
+      "Lacoste"
+    ],
+    "Guess": [
+      "Guess"
+    ],
+    "Pinko": [
+      "Pinko"
+    ],
+    "Cle de Peau Beaute": [
+      "Clé de Peau",
+      "Cle de Peau"
+    ],
+    "Shu Uemura": [
+      "Shu Uemura"
+    ],
+    "Nars": [
+      "NARS"
+    ],
+    "Tamburins": [
+      "Tamburins"
+    ],
+    "Visa": [
+      "Visa"
+    ],
+    "Mastercard": [
+      "Mastercard"
+    ],
+    "Doritos": [
+      "Doritos"
+    ],
+    "Oreo": [
+      "Oreo"
+    ],
+    "Pringles": [
+      "Pringles"
+    ],
+    "Nongshim": [
+      "Nongshim"
+    ],
+    "Baskin Robbins": [
+      "Baskin Robbins"
+    ],
+    "Dunkin'": [
+      "Dunkin'",
+      "Dunkin"
+    ],
+    "Krispy Kreme": [
+      "Krispy Kreme"
+    ],
+    "Toyota": [
+      "Toyota"
+    ],
+    "Lexus": [
+      "Lexus"
+    ],
+    "Audi": [
+      "Audi"
+    ],
+    "Cadillac": [
+      "Cadillac"
+    ],
+    "Ferrari": [
+      "Ferrari"
+    ]
+  },
+  "Award": {
+    "MAMA Awards": [
+      "MAMA Awards",
+      "MAMA",
+      "Mnet Asian Music Awards",
+      "MAMA 2024",
+      "MAMA 2025"
+    ],
+    "Melon Music Awards": [
+      "Melon Music Awards",
+      "MMA"
+    ],
+    "Golden Disc Awards": [
+      "Golden Disc Awards",
+      "Golden Disc",
+      "GDA"
+    ],
+    "Seoul Music Awards": [
+      "Seoul Music Awards",
+      "SMA"
+    ],
+    "Circle Chart Music Awards": [
+      "Circle Chart Music Awards",
+      "Gaon Chart Music Awards"
+    ],
+    "Asia Artist Awards": [
+      "Asia Artist Awards",
+      "AAA"
+    ],
+    "The Fact Music Awards": [
+      "The Fact Music Awards",
+      "TMA"
+    ],
+    "Hanteo Music Awards": [
+      "Hanteo Music Awards"
+    ],
+    "Korean Music Awards": [
+      "Korean Music Awards"
+    ],
+    "Korea Grand Music Awards": [
+      "Korea Grand Music Awards",
+      "KGMA"
+    ],
+    "Grammy Awards": [
+      "Grammy",
+      "Grammys",
+      "Grammy Awards",
+      "giải Grammy"
+    ],
+    "Billboard Music Awards": [
+      "Billboard Music Awards",
+      "BBMAs",
+      "BBMA"
+    ],
+    "American Music Awards": [
+      "American Music Awards",
+      "AMAs",
+      "AMA"
+    ],
+    "MTV Video Music Awards": [
+      "MTV Video Music Awards",
+      "VMAs",
+      "MTV VMAs",
+      "VMA"
+    ],
+    "MTV Europe Music Awards": [
+      "MTV Europe Music Awards",
+      "MTV EMA",
+      "EMAs"
+    ],
+    "Brit Awards": [
+      "Brit Awards",
+      "BRIT Awards",
+      "Brits"
+    ],
+    "iHeartRadio Music Awards": [
+      "iHeartRadio Music Awards"
+    ],
+    "People's Choice Awards": [
+      "People's Choice Awards"
+    ],
+    "Nickelodeon Kids' Choice Awards": [
+      "Kids' Choice Awards"
+    ],
+    "Teen Choice Awards": [
+      "Teen Choice Awards"
+    ],
+    "Juno Awards": [
+      "Juno Awards"
+    ],
+    "Mercury Prize": [
+      "Mercury Prize"
+    ],
+    "Ivor Novello Awards": [
+      "Ivor Novello Awards"
+    ],
+    "CMA Awards": [
+      "CMA Awards",
+      "Country Music Association Awards"
+    ],
+    "ACM Awards": [
+      "ACM Awards",
+      "Academy of Country Music Awards"
+    ],
+    "BET Awards": [
+      "BET Awards"
+    ],
+    "Latin Grammy Awards": [
+      "Latin Grammy",
+      "Latin Grammys"
+    ],
+    "Japan Gold Disc Award": [
+      "Japan Gold Disc Award"
+    ],
+    "Genie Music Awards": [
+      "Genie Music Awards"
+    ],
+    "Soribada Best K-Music Awards": [
+      "Soribada Best K-Music Awards"
+    ],
+    "Daesang": [
+      "Daesang"
+    ],
+    "Bonsang": [
+      "Bonsang"
+    ],
+    "Rookie of the Year": [
+      "Rookie of the Year",
+      "Tân binh của năm"
+    ],
+    "WAU Awards": [
+      "WAU Awards"
+    ],
+    "Làn Sóng Xanh": [
+      "Làn Sóng Xanh"
+    ],
+    "Mai Vàng": [
+      "Mai Vàng"
+    ]
+  },
+  "Event": {
+    "Coachella": [
+      "Coachella"
+    ],
+    "Lollapalooza": [
+      "Lollapalooza"
+    ],
+    "Glastonbury": [
+      "Glastonbury"
+    ],
+    "Summer Sonic": [
+      "Summer Sonic"
+    ],
+    "Rock in Rio": [
+      "Rock in Rio"
+    ],
+    "Global Citizen Festival": [
+      "Global Citizen Festival",
+      "Global Citizen"
+    ],
+    "Super Bowl Halftime Show": [
+      "Super Bowl",
+      "Super Bowl Halftime Show"
+    ],
+    "Met Gala": [
+      "Met Gala"
+    ],
+    "Paris Fashion Week": [
+      "Paris Fashion Week",
+      "Tuần lễ thời trang Paris"
+    ],
+    "Milan Fashion Week": [
+      "Milan Fashion Week",
+      "Tuần lễ thời trang Milan"
+    ],
+    "New York Fashion Week": [
+      "New York Fashion Week",
+      "Tuần lễ thời trang New York"
+    ],
+    "London Fashion Week": [
+      "London Fashion Week"
+    ],
+    "Seoul Fashion Week": [
+      "Seoul Fashion Week"
+    ],
+    "Victoria's Secret Fashion Show": [
+      "Victoria's Secret Fashion Show"
+    ],
+    "Music Bank": [
+      "Music Bank"
+    ],
+    "Inkigayo": [
+      "Inkigayo",
+      "SBS Inkigayo"
+    ],
+    "M Countdown": [
+      "M Countdown",
+      "M!Countdown"
+    ],
+    "Show! Music Core": [
+      "Show! Music Core",
+      "Music Core"
+    ],
+    "Show Champion": [
+      "Show Champion"
+    ],
+    "The Show": [
+      "The Show"
+    ],
+    "KCON": [
+      "KCON"
+    ],
+    "Dream Concert": [
+      "Dream Concert"
+    ],
+    "SMTOWN Live": [
+      "SMTOWN LIVE",
+      "SMTOWN Live",
+      "SM Town Live"
+    ],
+    "Waterbomb": [
+      "Waterbomb",
+      "WATERBOMB"
+    ],
+    "8Wonder": [
+      "8Wonder",
+      "8WONDER"
+    ],
+    "Lễ hội Gió Mùa": [
+      "Monsoon Music Festival",
+      "Gió Mùa"
+    ],
+    "Rolling Loud": [
+      "Rolling Loud"
+    ],
+    "Tomorrowland": [
+      "Tomorrowland"
+    ],
+    "Ultra Music Festival": [
+      "Ultra Music Festival"
+    ],
+    "Governors Ball": [
+      "Governors Ball"
+    ],
+    "Jingle Ball": [
+      "Jingle Ball",
+      "iHeartRadio Jingle Ball"
+    ],
+    "Tiny Desk Concert": [
+      "Tiny Desk"
+    ],
+    "Eurovision Song Contest": [
+      "Eurovision"
+    ],
+    "Kohaku Uta Gassen": [
+      "Kohaku Uta Gassen",
+      "Kouhaku"
+    ],
+    "Gayo Daejeon": [
+      "Gayo Daejeon",
+      "SBS Gayo Daejeon"
+    ],
+    "KBS Song Festival": [
+      "KBS Song Festival"
+    ],
+    "MBC Gayo Daejejeon": [
+      "MBC Gayo Daejejeon"
+    ],
+    "Weverse Con Festival": [
+      "Weverse Con Festival",
+      "Weverse Con"
+    ],
+    "Produce 101": [
+      "Produce 101"
+    ],
+    "I-Land": [
+      "I-LAND",
+      "I-Land"
+    ],
+    "Boys Planet": [
+      "Boys Planet"
+    ],
+    "Girls Planet 999": [
+      "Girls Planet 999"
+    ],
+    "Queendom": [
+      "Queendom"
+    ],
+    "Kingdom": [
+      "Kingdom: Legendary War"
+    ],
+    "R U Next?": [
+      "R U Next?",
+      "R U Next"
+    ],
+    "My Teenage Girl": [
+      "My Teenage Girl"
+    ],
+    "Street Woman Fighter": [
+      "Street Woman Fighter"
+    ],
+    "Show Me The Money": [
+      "Show Me The Money"
+    ],
+    "American Idol": [
+      "American Idol"
+    ],
+    "The Voice": [
+      "The Voice"
+    ],
+    "The X Factor": [
+      "The X Factor",
+      "X Factor"
+    ]
+  },
+  "Company": {
+    "HYBE": [
+      "HYBE",
+      "HYBE Corporation",
+      "HYBE Labels",
+      "Hybe"
+    ],
+    "Big Hit Music": [
+      "Big Hit Music",
+      "BigHit Music",
+      "Big Hit Entertainment",
+      "BigHit"
+    ],
+    "ADOR": [
+      "ADOR"
+    ],
+    "Belift Lab": [
+      "Belift Lab",
+      "BELIFT LAB"
+    ],
+    "Source Music": [
+      "Source Music"
+    ],
+    "Pledis Entertainment": [
+      "Pledis Entertainment",
+      "Pledis",
+      "PLEDIS"
+    ],
+    "KOZ Entertainment": [
+      "KOZ Entertainment",
+      "KOZ"
+    ],
+    "HYBE America": [
+      "HYBE America"
+    ],
+    "HYBE Japan": [
+      "HYBE Japan",
+      "HYBE Labels Japan"
+    ],
+    "Ithaca Holdings": [
+      "Ithaca Holdings"
+    ],
+    "SM Entertainment": [
+      "SM Entertainment",
+      "SM Ent",
+      "SM"
+    ],
+    "YG Entertainment": [
+      "YG Entertainment",
+      "YG Ent",
+      "YG"
+    ],
+    "JYP Entertainment": [
+      "JYP Entertainment",
+      "JYP Ent",
+      "JYP"
+    ],
+    "The Black Label": [
+      "The Black Label",
+      "THEBLACKLABEL"
+    ],
+    "Starship Entertainment": [
+      "Starship Entertainment",
+      "Starship"
+    ],
+    "Cube Entertainment": [
+      "Cube Entertainment",
+      "Cube"
+    ],
+    "FNC Entertainment": [
+      "FNC Entertainment",
+      "FNC"
+    ],
+    "Woollim Entertainment": [
+      "Woollim Entertainment",
+      "Woollim"
+    ],
+    "RBW": [
+      "RBW",
+      "RBW Entertainment"
+    ],
+    "WM Entertainment": [
+      "WM Entertainment"
+    ],
+    "IST Entertainment": [
+      "IST Entertainment"
+    ],
+    "Kakao Entertainment": [
+      "Kakao Entertainment",
+      "Kakao"
+    ],
+    "CJ ENM": [
+      "CJ ENM",
+      "CJ E&M"
+    ],
+    "Mnet": [
+      "Mnet"
+    ],
+    "Wake One": [
+      "Wake One",
+      "WAKEONE"
+    ],
+    "Fantagio": [
+      "Fantagio"
+    ],
+    "Jellyfish Entertainment": [
+      "Jellyfish Entertainment",
+      "Jellyfish"
+    ],
+    "P Nation": [
+      "P Nation",
+      "P NATION"
+    ],
+    "Antenna": [
+      "Antenna Music",
+      "Antenna"
+    ],
+    "Modhaus": [
+      "Modhaus",
+      "MODHAUS"
+    ],
+    "Attrakt": [
+      "ATTRAKT",
+      "Attrakt"
+    ],
+    "Blockberry Creative": [
+      "Blockberry Creative"
+    ],
+    "Brave Entertainment": [
+      "Brave Entertainment"
+    ],
+    "DSP Media": [
+      "DSP Media"
+    ],
+    "KQ Entertainment": [
+      "KQ Entertainment"
+    ],
+    "Mystic Story": [
+      "Mystic Story"
+    ],
+    "Edam Entertainment": [
+      "EDAM Entertainment",
+      "Edam Entertainment"
+    ],
+    "AOMG": [
+      "AOMG"
+    ],
+    "H1ghr Music": [
+      "H1GHR MUSIC",
+      "H1ghr Music"
+    ],
+    "Ambition Musik": [
+      "Ambition Musik"
+    ],
+    "Grid Entertainment": [
+      "Grid Entertainment"
+    ],
+    "F&F Entertainment": [
+      "F&F Entertainment"
+    ],
+    "Galaxy Corporation": [
+      "Galaxy Corporation"
+    ],
+    "AKKO": [
+      "Ador AKKO"
+    ],
+    "Big Planet Made": [
+      "Big Planet Made",
+      "BPM Entertainment"
+    ],
+    "INB100": [
+      "INB100"
+    ],
+    "Beat Interactive": [
+      "Beat Interactive"
+    ],
+    "Dreamus": [
+      "Dreamus"
+    ],
+    "Stone Music Entertainment": [
+      "Stone Music Entertainment"
+    ],
+    "Universal Music Group": [
+      "Universal Music Group",
+      "Universal Music",
+      "UMG"
+    ],
+    "Sony Music Entertainment": [
+      "Sony Music Entertainment",
+      "Sony Music"
+    ],
+    "Warner Music Group": [
+      "Warner Music Group",
+      "Warner Music",
+      "Warner Records"
+    ],
+    "Republic Records": [
+      "Republic Records"
+    ],
+    "Interscope Records": [
+      "Interscope Records",
+      "Interscope"
+    ],
+    "Columbia Records": [
+      "Columbia Records"
+    ],
+    "Atlantic Records": [
+      "Atlantic Records"
+    ],
+    "Capitol Records": [
+      "Capitol Records",
+      "Capitol Music Group"
+    ],
+    "Def Jam Recordings": [
+      "Def Jam Recordings",
+      "Def Jam"
+    ],
+    "RCA Records": [
+      "RCA Records",
+      "RCA"
+    ],
+    "Epic Records": [
+      "Epic Records"
+    ],
+    "Island Records": [
+      "Island Records"
+    ],
+    "Geffen Records": [
+      "Geffen Records",
+      "Geffen"
+    ],
+    "Big Machine Records": [
+      "Big Machine Records",
+      "Big Machine"
+    ],
+    "Roc Nation": [
+      "Roc Nation"
+    ],
+    "Parkwood Entertainment": [
+      "Parkwood Entertainment"
+    ],
+    "Top Dawg Entertainment": [
+      "Top Dawg Entertainment",
+      "TDE"
+    ],
+    "XO Records": [
+      "XO Records"
+    ],
+    "Polydor Records": [
+      "Polydor Records",
+      "Polydor"
+    ],
+    "Elektra Records": [
+      "Elektra Records"
+    ],
+    "Motown": [
+      "Motown"
+    ],
+    "Live Nation": [
+      "Live Nation"
+    ],
+    "Ticketmaster": [
+      "Ticketmaster"
+    ],
+    "SB Projects": [
+      "SB Projects"
+    ],
+    "Shamrock Capital": [
+      "Shamrock Capital"
+    ],
+    "10 Asia": [
+      "10x Asia"
+    ],
+    "Avex": [
+      "Avex"
+    ],
+    "Tencent Music": [
+      "Tencent Music"
+    ],
+    "Abema": [
+      "ABEMA"
+    ]
+  },
+  "Artist": {
+    "Rosé": [
+      "Rosé",
+      "Rose BLACKPINK",
+      "Roseanne Park",
+      "Park Chae-young",
+      "Park Chaeyoung"
+    ],
+    "Min Hee-jin": [
+      "Min Hee-jin",
+      "Min Hee Jin",
+      "Min Heejin"
+    ],
+    "Bang Si-hyuk": [
+      "Bang Si-hyuk",
+      "Bang Si Hyuk",
+      "Bang PD",
+      "Hitman Bang"
+    ],
+    "Lee Soo-man": [
+      "Lee Soo-man",
+      "Lee Soo Man"
+    ],
+    "Yang Hyun-suk": [
+      "Yang Hyun-suk",
+      "Yang Hyun Suk"
+    ],
+    "Park Jin-young": [
+      "Park Jin-young",
+      "Park Jin Young",
+      "J.Y. Park"
+    ],
+    "Teddy Park": [
+      "Teddy Park"
+    ],
+    "Scooter Braun": [
+      "Scooter Braun"
+    ],
+    "Karina": [
+      "Karina",
+      "Yu Ji-min"
+    ],
+    "Winter": [
+      "Winter",
+      "Kim Min-jeong"
+    ],
+    "Giselle": [
+      "Giselle",
+      "Uchinaga Aeri"
+    ],
+    "Ningning": [
+      "Ningning",
+      "Ning Yizhuo"
+    ],
+    "J-Hope": [
+      "J-Hope",
+      "Jung Ho-seok",
+      "Jung Hoseok"
+    ],
+    "Danielle": [
+      "Danielle",
+      "Danielle Marsh"
+    ],
+    "Nayeon": [
+      "Nayeon",
+      "Im Na-yeon"
+    ],
+    "Rihanna": [
+      "Rihanna"
+    ],
+    "Nicki Minaj": [
+      "Nicki Minaj"
+    ],
+    "Lorde": [
+      "Lorde"
+    ],
+    "Benson Boone": [
+      "Benson Boone"
+    ],
+    "Shakira": [
+      "Shakira"
+    ],
+    "Bad Bunny": [
+      "Bad Bunny"
+    ],
+    "Tyla": [
+      "Tyla"
+    ],
+    "Raye": [
+      "RAYE",
+      "Raye"
+    ],
+    "Gracie Abrams": [
+      "Gracie Abrams"
+    ],
+    "Tate McRae": [
+      "Tate McRae"
+    ],
+    "Troye Sivan": [
+      "Troye Sivan"
+    ],
+    "Alex Warren": [
+      "Alex Warren"
+    ],
+    "Ejae": [
+      "EJAE",
+      "Ejae"
+    ],
+    "Tems": [
+      "Tems"
+    ],
+    "Rosalía": [
+      "Rosalía",
+      "Rosalia"
+    ],
+    "Karol G": [
+      "Karol G"
+    ],
+    "J Balvin": [
+      "J Balvin"
+    ],
+    "Anitta": [
+      "Anitta"
+    ]
+  },
+  "ArtistGroups": {
+    "Rosé": "Blackpink",
+    "Karina": "aespa",
+    "Winter": "aespa",
+    "Giselle": "aespa",
+    "Ningning": "aespa",
+    "J-Hope": "BTS",
+    "Danielle": "NewJeans",
+    "Nayeon": "Twice"
+  },
+  "Group": {
+    "aespa": [
+      "aespa",
+      "Aespa",
+      "AESPA"
+    ],
+    "KATSEYE": [
+      "KATSEYE",
+      "Katseye"
+    ],
+    "ILLIT": [
+      "ILLIT",
+      "Illit"
+    ],
+    "MEOVV": [
+      "MEOVV",
+      "Meovv"
+    ],
+    "ALLDAY PROJECT": [
+      "ALLDAY PROJECT",
+      "All Day Project"
+    ],
+    "CORTIS": [
+      "CORTIS",
+      "Cortis"
+    ],
+    "Hearts2Hearts": [
+      "Hearts2Hearts"
+    ],
+    "BOYNEXTDOOR": [
+      "BOYNEXTDOOR",
+      "BoyNextDoor"
+    ],
+    "ZEROBASEONE": [
+      "ZEROBASEONE",
+      "ZB1"
+    ],
+    "BABYMONSTER": [
+      "BABYMONSTER",
+      "BabyMonster",
+      "Baby Monster"
+    ],
+    "izna": [
+      "izna",
+      "IZNA"
+    ],
+    "KiiiKiii": [
+      "KiiiKiii"
+    ],
+    "A2O LITE": [
+      "A2O LITE"
+    ],
+    "Close Your Eyes": [
+      "CLOSE YOUR EYES"
+    ],
+    "BigBang": [
+      "BIGBANG",
+      "BigBang",
+      "Big Bang"
+    ]
+  }
+}

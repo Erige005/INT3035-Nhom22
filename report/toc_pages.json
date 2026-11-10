@@ -1,0 +1,102 @@
+[
+ [
+  1,
+  "1. Phân công công việc trong nhóm",
+  3
+ ],
+ [
+  1,
+  "2. Giới thiệu mạng đã xây dựng",
+  3
+ ],
+ [
+  2,
+  "2.1. Bài toán và phạm vi",
+  3
+ ],
+ [
+  2,
+  "2.2. Lựa chọn nút",
+  3
+ ],
+ [
+  2,
+  "2.3. Lựa chọn cạnh (loại quan hệ)",
+  4
+ ],
+ [
+  2,
+  "2.4. Ví dụ cạnh kèm dẫn chứng",
+  5
+ ],
+ [
+  1,
+  "3. Stack công nghệ thu thập và xử lý dữ liệu",
+  7
+ ],
+ [
+  2,
+  "3.1. Kiến trúc pipeline",
+  8
+ ],
+ [
+  1,
+  "4. Thu thập dữ liệu",
+  8
+ ],
+ [
+  1,
+  "5. Các bước tiền xử lý dữ liệu",
+  9
+ ],
+ [
+  2,
+  "5.1. Trích xuất quan hệ",
+  10
+ ],
+ [
+  1,
+  "6. Lưu trữ trong Neo4j",
+  10
+ ],
+ [
+  1,
+  "7. Thống kê mạng đã xây dựng",
+  11
+ ],
+ [
+  2,
+  "7.1. Các nút trung tâm",
+  14
+ ],
+ [
+  1,
+  "8. Đánh giá sơ bộ chất lượng",
+  15
+ ],
+ [
+  1,
+  "9. Kết luận",
+  16
+ ],
+ [
+  2,
+  "9.1. Đã đạt được",
+  16
+ ],
+ [
+  2,
+  "9.2. Chưa đạt / hạn chế",
+  16
+ ],
+ [
+  2,
+  "9.3. Hướng phát triển cho bài cuối kỳ",
+  17
+ ],
+ [
+  1,
+  "10. Mã nguồn",
+  17
+ ]
+]

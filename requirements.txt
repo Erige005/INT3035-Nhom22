@@ -1,0 +1,8 @@
+requests>=2.32
+beautifulsoup4>=4.12
+pyahocorasick>=2.1
+neo4j>=5.20
+networkx>=3.3
+pandas>=2.2
+matplotlib>=3.9
+python-docx>=1.1

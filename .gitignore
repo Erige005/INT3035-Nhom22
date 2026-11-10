@@ -1,0 +1,13 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+.DS_Store
+data/raw/articles.jsonl
+data/raw/urls_snapshot*.jsonl
+data/raw/urls_trial_oct.jsonl
+data/raw/sitemaps_done.txt
+report/*.pdf~
+data/gazetteer/build_log.txt
+report/~$*
+data/processed/relations.jsonl

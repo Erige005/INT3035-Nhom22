@@ -1,0 +1,227 @@
+{
+  "nodes": 4423,
+  "edges": 5778,
+  "rel_types": 16,
+  "louvain_communities": 220,
+  "louvain_modularity": 0.7889394021629411,
+  "top_pagerank": [
+    {
+      "name": "Blackpink",
+      "type": "Group",
+      "pagerank": 70.488,
+      "degree": 139
+    },
+    {
+      "name": "BTS",
+      "type": "Group",
+      "pagerank": 60.089,
+      "degree": 137
+    },
+    {
+      "name": "Seventeen",
+      "type": "Group",
+      "pagerank": 36.869,
+      "degree": 93
+    },
+    {
+      "name": "Aespa",
+      "type": "Group",
+      "pagerank": 34.155,
+      "degree": 78
+    },
+    {
+      "name": "Stray Kids",
+      "type": "Group",
+      "pagerank": 33.884,
+      "degree": 102
+    },
+    {
+      "name": "Lisa",
+      "type": "Artist",
+      "pagerank": 32.711,
+      "degree": 66
+    },
+    {
+      "name": "Jennie",
+      "type": "Artist",
+      "pagerank": 30.498,
+      "degree": 90
+    },
+    {
+      "name": "Le Sserafim",
+      "type": "Group",
+      "pagerank": 26.346,
+      "degree": 68
+    },
+    {
+      "name": "Ive",
+      "type": "Group",
+      "pagerank": 26.09,
+      "degree": 62
+    },
+    {
+      "name": "Enhypen",
+      "type": "Group",
+      "pagerank": 26.014,
+      "degree": 67
+    },
+    {
+      "name": "Twice",
+      "type": "Group",
+      "pagerank": 25.881,
+      "degree": 64
+    },
+    {
+      "name": "Ateez",
+      "type": "Group",
+      "pagerank": 25.843,
+      "degree": 57
+    },
+    {
+      "name": "Grammy Awards",
+      "type": "Award",
+      "pagerank": 24.336,
+      "degree": 129
+    },
+    {
+      "name": "Rosé",
+      "type": "Artist",
+      "pagerank": 23.214,
+      "degree": 60
+    },
+    {
+      "name": "Jung Kook",
+      "type": "Artist",
+      "pagerank": 22.905,
+      "degree": 52
+    },
+    {
+      "name": "EXO",
+      "type": "Group",
+      "pagerank": 22.87,
+      "degree": 48
+    },
+    {
+      "name": "Tomorrow X Together",
+      "type": "Group",
+      "pagerank": 22.72,
+      "degree": 60
+    },
+    {
+      "name": "NCT",
+      "type": "Group",
+      "pagerank": 21.923,
+      "degree": 42
+    },
+    {
+      "name": "Zerobaseone",
+      "type": "Group",
+      "pagerank": 20.92,
+      "degree": 51
+    },
+    {
+      "name": "Illit",
+      "type": "Group",
+      "pagerank": 20.505,
+      "degree": 58
+    }
+  ],
+  "top_communities": [
+    {
+      "community": 4073,
+      "size": 365,
+      "top_members": [
+        "BTS",
+        "Grammy Awards",
+        "Jung Kook",
+        "Coachella",
+        "Jimin",
+        "Taylor Swift"
+      ]
+    },
+    {
+      "community": 3996,
+      "size": 344,
+      "top_members": [
+        "EXO",
+        "NCT",
+        "SHINee",
+        "SM Entertainment",
+        "Red Velvet",
+        "Super Junior"
+      ]
+    },
+    {
+      "community": 3989,
+      "size": 337,
+      "top_members": [
+        "Blackpink",
+        "Lisa",
+        "Jennie",
+        "Rosé",
+        "BigBang",
+        "YG Entertainment"
+      ]
+    },
+    {
+      "community": 3995,
+      "size": 193,
+      "top_members": [
+        "Le Sserafim",
+        "Illit",
+        "NewJeans",
+        "Hybe",
+        "The Show",
+        "ADOR"
+      ]
+    },
+    {
+      "community": 4099,
+      "size": 154,
+      "top_members": [
+        "Ateez",
+        "Inkigayo",
+        "Show! Music Core",
+        "AKMU",
+        "Doh Kyung-soo",
+        "AllDay Project"
+      ]
+    },
+    {
+      "community": 1725,
+      "size": 153,
+      "top_members": [
+        "Stray Kids",
+        "Cravity",
+        "Kim Seok-jin",
+        "Wendy",
+        "(5-STAR)",
+        "KARMA"
+      ]
+    },
+    {
+      "community": 1582,
+      "size": 139,
+      "top_members": [
+        "I-dle",
+        "BtoB",
+        "Highlight",
+        "Yook Sung-jae",
+        "Pentagon",
+        "Song Yuqi"
+      ]
+    },
+    {
+      "community": 42,
+      "size": 136,
+      "top_members": [
+        "Seventeen",
+        "Girls' Generation",
+        "2PM",
+        "Sooyoung",
+        "Lim Yoona",
+        "Daesang"
+      ]
+    }
+  ]
+}

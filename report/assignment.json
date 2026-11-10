@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Nguyễn Nhật Nam (23020557)",
+    "tasks": "Thiết kế lược đồ nút/cạnh và 16 loại quan hệ; xây dựng từ điển thực thể; thu thập dữ liệu báo chí (sitemap, tải và bóc tách bài); xây dựng mô-đun NER và trích xuất quan hệ; lưu trữ đồ thị trên Neo4j và chạy thử thuật toán GDS; quản lý mã nguồn GitHub."
+  },
+  {
+    "name": "Lưu Đạt Tuấn Nghĩa (23020559)",
+    "tasks": "Tiền xử lý văn bản (chuẩn hóa, tách câu, khử trùng lặp, lọc tin đồn); gộp cạnh và tính độ hỗ trợ; thống kê, trực quan hóa mạng; lấy mẫu kiểm tra chất lượng; viết và hoàn thiện báo cáo."
+  }
+]

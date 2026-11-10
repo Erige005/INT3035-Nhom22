@@ -1,0 +1,33 @@
+{
+  "nodes": 4423,
+  "edges": 5778,
+  "dropped_rumor_mentions": 59,
+  "node_types": {
+    "Group": 293,
+    "Album": 1155,
+    "Artist": 976,
+    "Song": 1793,
+    "Company": 85,
+    "Award": 25,
+    "Event": 39,
+    "Brand": 57
+  },
+  "edge_types": {
+    "RELEASED": 2980,
+    "MEMBER_OF": 759,
+    "LEFT_COMPANY": 114,
+    "SIGNED_WITH": 102,
+    "PERFORMED_AT": 481,
+    "NOMINATED_FOR": 75,
+    "LEGAL_ACTION": 87,
+    "COLLABORATED_WITH": 272,
+    "WON_AWARD": 446,
+    "DEBUTED_UNDER": 145,
+    "BRAND_AMBASSADOR": 189,
+    "SUBSIDIARY_OF": 27,
+    "LEFT_GROUP": 31,
+    "RENEWED_CONTRACT": 39,
+    "ACQUIRED_STAKE": 16,
+    "PRODUCED_FOR": 15
+  }
+}
