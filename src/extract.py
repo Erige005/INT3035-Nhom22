@@ -207,7 +207,7 @@ class Gazetteer:
             w = m.group(1).lstrip("([\"'“‘")
             if not w or not w[0].isupper():
                 return False
-            a = base + m.start(1)
+            a = base + m.start(1) + (len(m.group(1)) - len(w))  # vị trí sau dấu mở ngoặc
             return not any(x <= a < y for x, y in spans)
         return free(prev, max(0, s - 30)) or free(nxt, e)
 
@@ -278,7 +278,7 @@ REL_RULES = [
      r"hợp tác|kết hợp|bắt tay|song ca|góp giọng|collab|featuring|feat\.?|ft\.|collaborat(?:e|ed|es|ion|ions|ing)|team(?:s|ed)? up|duet|joint (?:single|song|track)|joins? forces",
      ART, ART, True),
     ("BRAND_AMBASSADOR", "Đại sứ / gương mặt đại diện nhãn hàng",
-     r"đại sứ|gương mặt đại diện|gương mặt mới|nàng thơ|người đại diện|đại diện (?:cho |của )?thương hiệu|ambassador|face of|muse|endorse(?:s|d|ment)?|campaign|chiến dịch|quảng cáo|house (?:ambassador|friend)|brand friend",
+     r"đại sứ|gương mặt đại diện|gương mặt mới|đại diện (?:cho |của )?thương hiệu|ambassador|(?:new |the )?face of|house (?:ambassador|friend)|brand friend",
      ART, ("Brand",), False),
     ("RELEASED", "Phát hành bài hát / album",
      r"ra mắt|phát hành|tung|comeback|trở lại|release[ds]?|releasing|drop(?:s|ped)?|unveil(?:s|ed)?|pre-release|title track|ca khúc chủ đề|MV|music video|album|single|ca khúc|bài hát|hát|'s",
@@ -299,7 +299,7 @@ REL_RULES = [
      r"thâu tóm|mua lại|sáp nhập|cổ phần|thoái vốn|acquir(?:e|ed|es|ing|ition)|stake|merger|takeover|invest(?:s|ed|ment)? in|buyout|bought",
      ("Company",), ("Company",), False),
     ("PRODUCED_FOR", "Sáng tác / sản xuất cho nghệ sĩ",
-     r"sản xuất|sáng tác|viết (?:lời|nhạc|bài)|nhà sản xuất|producer|produc(?:ed|es|ing)|wr(?:ote|itten|ites)|penned|compos(?:ed|er)|songwriter|chắp bút",
+     r"(?<!nhà )(?<!giám đốc )sản xuất|(?<!nhà )sáng tác|viết (?:lời|nhạc|bài)|produc(?:ed|es|ing)|wr(?:ote|itten|ites)|penned|composed|chắp bút",
      ("Artist",), ART + ("Song", "Album"), False),
 ]
 COMPILED = [(n, d, re.compile(r"(?<!\w)(?:" + t + r")(?!\w)", re.I), st, ot, sym)
@@ -342,6 +342,10 @@ def mark_appositives(sent, mentions):
         a, b = mentions[i - 1], mentions[i]
         if a["type"] == "Artist" and b["type"] == "Group" and re.fullmatch(r"\s*\(\s*", sent[a["e"]:b["s"]]):
             b["appos"] = True
+        # "BLACKPINK's Jennie" / "thành viên BTS Jungkook": quan hệ thuộc về thành viên, không phải cả nhóm
+        if a["type"] == "Group" and b["type"] == "Artist" and \
+                re.fullmatch(r"\s*'s\s*(?:member\s+|leader\s+|maknae\s+)?|\s+", sent[a["e"]:b["s"]]):
+            a["appos"] = True
 
 
 # Khoảng cách tối đa (ký tự) từ trigger tới chủ thể bên trái / đối tượng bên phải theo từng quan hệ
@@ -499,7 +503,7 @@ def structural_member(sent, mentions):
                 out.append(("MEMBER_OF", m, nxt, between.strip() or "()"))
         if prv and prv["type"] == "Group":
             between = sent[prv["e"]:m["s"]]
-            if re.fullmatch(r"'s\s+(?:member\s+|leader\s+|maknae\s+)?", between) or re.fullmatch(r"\s+(?:member|thành viên|trưởng nhóm|em út)\s+", between):
+            if re.fullmatch(r"\s*'s\s+(?:member\s+|leader\s+|maknae\s+)?", between) or re.fullmatch(r"\s+(?:member|thành viên|trưởng nhóm|em út)\s+", between):
                 out.append(("MEMBER_OF", m, prv, between.strip()))
     return out
 

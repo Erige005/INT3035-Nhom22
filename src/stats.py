@@ -51,6 +51,16 @@ def main():
     st["node_types"] = dict(Counter(n["type"] for n in nodes.values()).most_common())
     st["edge_types"] = dict(Counter(e["rel"] for e in edges).most_common())
     st["edges_support_ge2"] = sum(int(e["support"]) >= 2 for e in edges)
+    # Đồ thị lõi: nghệ sĩ – nhóm – công ty – nhãn hàng – giải thưởng – sự kiện (không gồm lớp bài hát/album)
+    works = {"Song", "Album"}
+    core_e = [e for e in edges if nodes[e["src"]]["type"] not in works and nodes[e["dst"]]["type"] not in works]
+    core_n = {x for e in core_e for x in (e["src"], e["dst"])}
+    st["core_nodes"] = len(core_n)
+    st["core_edges"] = len(core_e)
+    st["core_node_types"] = dict(Counter(nodes[n]["type"] for n in core_n).most_common())
+    st["core_edge_types"] = dict(Counter(e["rel"] for e in core_e).most_common())
+    st["work_nodes"] = sum(1 for n in nodes.values() if n["type"] in works)
+    st["work_edges"] = len(edges) - len(core_e)
     st["edge_langs"] = dict(Counter(e["langs"] for e in edges).most_common())
     st["edge_sources"] = dict(Counter(s for e in edges for s in e["sources"].split("|")).most_common())
     st["undirected_simple_edges"] = U.number_of_edges()
@@ -101,6 +111,7 @@ def main():
     bar(Counter(st["node_types"]), "Số nút theo loại thực thể", "node_types.png")
     bar(Counter(st["edge_types"]), "Số cạnh theo loại quan hệ", "edge_types.png")
     bar(Counter(st["edge_sources"]), "Số cạnh có dẫn chứng theo nguồn báo", "edge_sources.png")
+    bar(Counter(st["core_edge_types"]), "Đồ thị lõi: số cạnh theo loại quan hệ", "core_edge_types.png")
     dc = Counter(U.degree(n) for n in U)
     fig, ax = plt.subplots(figsize=(6, 4))
     xs = sorted(dc)
@@ -120,8 +131,8 @@ def main():
     fig.tight_layout()
     fig.savefig(FIG / "edge_support.png")
     plt.close(fig)
-    # Ảnh đồ thị con: 60 nút bậc cao nhất
-    top = [i for i, _ in sorted(U.degree(), key=lambda x: -x[1])[:60]]
+    # Ảnh đồ thị con: 60 nút bậc cao nhất của đồ thị lõi (bỏ lớp bài hát/album)
+    top = [i for i, _ in sorted(U.degree(), key=lambda x: -x[1]) if nodes[i]["type"] not in works][:60]
     H = U.subgraph(top)
     palette = {"Artist": "#2a6fb0", "Group": "#d1495b", "Company": "#edae49", "Brand": "#00798c",
                "Award": "#66a182", "Event": "#8d6a9f", "Song": "#999999", "Album": "#555555"}
@@ -135,7 +146,7 @@ def main():
         ax.scatter([], [], color=c, label=t)
     ax.legend(loc="lower left", fontsize=7, frameon=False)
     ax.set_axis_off()
-    ax.set_title("Đồ thị con: 60 nút có bậc cao nhất")
+    ax.set_title("Đồ thị lõi: 60 nút nghệ sĩ/nhóm/công ty/nhãn hàng/giải/sự kiện có bậc cao nhất")
     fig.tight_layout()
     fig.savefig(FIG / "top60_subgraph.png")
     plt.close(fig)

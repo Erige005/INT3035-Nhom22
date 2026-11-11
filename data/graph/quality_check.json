@@ -1,72 +1,75 @@
 {
-  "sample": 160,
-  "correct": 122,
-  "precision": 0.7625,
-  "weighted_precision": 0.8399619245413639,
+  "sample": 471,
+  "correct": 343,
+  "precision": 0.7282377919320594,
+  "weighted_precision": 0.8189971216482351,
+  "excluded_from_graph": [
+    "LEGAL_ACTION"
+  ],
   "by_rel": {
     "ACQUIRED_STAKE": {
-      "n": 10,
-      "ok": 6
-    },
-    "BRAND_AMBASSADOR": {
-      "n": 10,
-      "ok": 7
-    },
-    "COLLABORATED_WITH": {
-      "n": 10,
-      "ok": 5
-    },
-    "DEBUTED_UNDER": {
-      "n": 10,
-      "ok": 7
-    },
-    "LEFT_COMPANY": {
-      "n": 10,
-      "ok": 9
-    },
-    "LEFT_GROUP": {
-      "n": 10,
-      "ok": 10
-    },
-    "LEGAL_ACTION": {
-      "n": 10,
-      "ok": 3
-    },
-    "MEMBER_OF": {
-      "n": 10,
-      "ok": 9
-    },
-    "NOMINATED_FOR": {
-      "n": 10,
-      "ok": 9
-    },
-    "PERFORMED_AT": {
-      "n": 10,
-      "ok": 9
-    },
-    "PRODUCED_FOR": {
-      "n": 10,
-      "ok": 10
-    },
-    "RELEASED": {
-      "n": 10,
-      "ok": 9
-    },
-    "RENEWED_CONTRACT": {
-      "n": 10,
+      "n": 16,
       "ok": 8
     },
+    "BRAND_AMBASSADOR": {
+      "n": 35,
+      "ok": 23
+    },
+    "COLLABORATED_WITH": {
+      "n": 35,
+      "ok": 14
+    },
+    "DEBUTED_UNDER": {
+      "n": 35,
+      "ok": 18
+    },
+    "LEFT_COMPANY": {
+      "n": 35,
+      "ok": 27
+    },
+    "LEFT_GROUP": {
+      "n": 31,
+      "ok": 24
+    },
+    "LEGAL_ACTION": {
+      "n": 35,
+      "ok": 18
+    },
+    "MEMBER_OF": {
+      "n": 35,
+      "ok": 30
+    },
+    "NOMINATED_FOR": {
+      "n": 35,
+      "ok": 30
+    },
+    "PERFORMED_AT": {
+      "n": 35,
+      "ok": 28
+    },
+    "PRODUCED_FOR": {
+      "n": 12,
+      "ok": 11
+    },
+    "RELEASED": {
+      "n": 35,
+      "ok": 31
+    },
+    "RENEWED_CONTRACT": {
+      "n": 35,
+      "ok": 26
+    },
     "SIGNED_WITH": {
-      "n": 10,
-      "ok": 7
+      "n": 35,
+      "ok": 26
     },
     "SUBSIDIARY_OF": {
-      "n": 10,
-      "ok": 7
+      "n": 27,
+      "ok": 20
     },
     "WON_AWARD": {
-      "n": 10,
-      "ok": 7
+      "n": 35,
+      "ok": 27
     }
   }
 }

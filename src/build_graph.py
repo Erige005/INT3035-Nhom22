@@ -15,6 +15,9 @@ from collections import defaultdict
 from common import GAZ_DIR, OUT_DIR, PROC_DIR, read_jsonl, write_jsonl
 
 SYMMETRIC = {"COLLABORATED_WITH"}
+# Loại quan hệ bị loại khỏi đồ thị sau đánh giá chất lượng (mẫu 35 cạnh: LEGAL_ACTION đúng 18/35 = 51%).
+# Luật trích xuất vẫn được giữ trong extract.py để cải tiến ở bài cuối kỳ.
+EXCLUDED_RELS = {"LEGAL_ACTION"}
 RUMOR_SENSITIVE = {"SIGNED_WITH", "RENEWED_CONTRACT", "LEFT_COMPANY", "LEFT_GROUP", "BRAND_AMBASSADOR",
                    "DEBUTED_UNDER"}
 
@@ -26,6 +29,8 @@ def main():
     nodes = {}
     dropped = 0
     for r in rels:
+        if r["rel"] in EXCLUDED_RELS:
+            continue
         if r["negated_or_rumor"] and r["rel"] in RUMOR_SENSITIVE:
             dropped += 1
             continue

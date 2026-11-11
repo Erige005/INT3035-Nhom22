@@ -11,7 +11,7 @@ Pipeline lấy tin tức âm nhạc quốc tế/K-pop từ 5 trang báo, nhận 
 
 - **Nguồn báo:** Kênh14, Thanh Niên, Tuổi Trẻ, Znews (tiếng Việt) và Soompi (tiếng Anh). Chỉ thu thập các trang có robots.txt cho phép.
 - **Nút (8 loại):** Artist, Group, Company, Brand, Award, Event, Song, Album.
-- **Cạnh (16 loại):** MEMBER_OF, DEBUTED_UNDER, SIGNED_WITH, RENEWED_CONTRACT, LEFT_COMPANY, LEFT_GROUP, LEGAL_ACTION, COLLABORATED_WITH, BRAND_AMBASSADOR, RELEASED, WON_AWARD, NOMINATED_FOR, PERFORMED_AT, SUBSIDIARY_OF, ACQUIRED_STAKE, PRODUCED_FOR.
+- **Cạnh (15 loại):** MEMBER_OF, DEBUTED_UNDER, SIGNED_WITH, RENEWED_CONTRACT, LEFT_COMPANY, LEFT_GROUP, COLLABORATED_WITH, BRAND_AMBASSADOR, RELEASED, WON_AWARD, NOMINATED_FOR, PERFORMED_AT, SUBSIDIARY_OF, ACQUIRED_STAKE, PRODUCED_FOR.
 - Mỗi cạnh có `support` (số bài báo dẫn chứng) và tối đa 3 câu dẫn chứng kèm URL. Bài báo và câu văn **không** được tính là nút hay cạnh.
 - Wikidata chỉ được dùng làm **từ điển tên thực thể** cho bước NER, không dùng để tạo cạnh.
 
@@ -20,10 +20,10 @@ Pipeline lấy tin tức âm nhạc quốc tế/K-pop từ 5 trang báo, nhận 
 | Chỉ số | Giá trị |
 | --- | --- |
 | Bài báo xử lý | 33.118 (22.484 tiếng Việt, 10.634 tiếng Anh) |
-| Nút | 4.423 (976 nghệ sĩ, 293 nhóm, 85 công ty, 57 nhãn hàng, 25 giải thưởng, 39 sự kiện, 1.793 bài hát, 1.155 album) |
-| Cạnh | 5.778 (2.323 cạnh có ≥ 2 bài báo dẫn chứng) |
-| Loại quan hệ | 16 |
-| Độ chính xác sơ bộ | 76,2% trên mẫu phân tầng 160 cạnh; 84,0% khi quy đổi theo tỷ trọng cạnh (`data/graph/quality_check.json`) |
+| Nút | 4.429 — lõi: 990 nghệ sĩ, 292 nhóm, 80 công ty, 56 nhãn hàng, 25 giải thưởng, 39 sự kiện; lớp phụ: 1790 bài hát, 1157 album |
+| Cạnh | 5.658 (2.679 cạnh lõi, 2.979 cạnh tới bài hát/album; 2.313 cạnh có ≥ 2 bài báo) |
+| Loại quan hệ | 15 (LEGAL_ACTION bị loại vì độ chính xác 51%) |
+| Độ chính xác sơ bộ | 72.8% trên 471 cạnh mẫu của 15 loại (35 cạnh/loại, tổng mẫu 506 kể cả LEGAL_ACTION); 81.9% khi quy đổi theo tỷ trọng cạnh (`data/graph/quality_check.json`) |
 
 Số liệu đầy đủ: `data/graph/summary.json`, `data/graph/stats.json`, `data/graph/neo4j_gds.json`.
 
@@ -41,6 +41,7 @@ src/build_graph.py            B6  Gộp cạnh, tính support → nodes.csv / ed
 src/load_neo4j.py             B7  Nạp Neo4j, chạy PageRank / Louvain / Degree (GDS)
 src/stats.py                  B8  Thống kê mạng và biểu đồ
 src/review_sample.py          B9  Lấy mẫu cạnh và tính độ chính xác sơ bộ
+src/demo.py                   Chạy thử NER + trích xuất quan hệ trên một câu hoặc một URL bài báo
 report/make_report.sh         Sinh báo cáo .docx + .pdf (cần LibreOffice, poppler)
 data/gazetteer/               Từ điển thực thể
 data/raw/urls.jsonl           Danh sách URL bài báo (không kèm toàn văn bài báo)
@@ -82,4 +83,4 @@ MATCH (a)-[r:LEGAL_ACTION]->(b) RETURN a.name, b.name, r.support, r.evidence_sen
 
 ## Hạn chế
 
-Hệ thống trích xuất quan hệ bằng luật nên có thể bỏ sót hoặc gán sai chiều ở câu phức. Độ chính xác hiện chưa đạt mức ≥ 90%; các quan hệ yếu nhất là LEGAL_ACTION, COLLABORATED_WITH và ACQUIRED_STAKE. Nút tác phẩm (bài hát/album) chiếm khoảng 67% số nút.
+Hệ thống trích xuất quan hệ bằng luật nên có thể bỏ sót hoặc gán sai chiều ở câu phức. Độ chính xác hiện chưa đạt mức ≥ 90%; các quan hệ yếu nhất là COLLABORATED_WITH, ACQUIRED_STAKE và DEBUTED_UNDER. LEGAL_ACTION có luật trích xuất trong `extract.py` nhưng bị loại khỏi đồ thị (`build_graph.py`, `EXCLUDED_RELS`). Lớp bài hát/album chiếm khoảng 67% số nút; lớp lõi nghệ sĩ–công ty–nhãn hàng thống kê riêng trong `stats.json` (`core_*`).

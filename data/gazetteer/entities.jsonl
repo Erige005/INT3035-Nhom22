@@ -4977,7 +4977,7 @@
 {"id": "Q1994815", "type": "Artist", "popularity": 11, "source": "wikidata:group_members", "groups": ["Q192353"], "name": "Andrew Giddings", "aliases": ["Andrew Giddings", "FFANDANGO"]}
 {"id": "Q2010689", "type": "Artist", "popularity": 12, "source": "wikidata:group_members", "groups": ["Q192353"], "name": "Maartin Allcock", "aliases": ["Maartin Allcock", "Martin Allcock"]}
 {"id": "Q183387", "type": "Company", "popularity": 54, "source": "wikidata:record_label+manual", "groups": [], "name": "Columbia Records", "aliases": ["Columbia", "Columbia Records", "컬럼비아 레코드"]}
-{"id": "Q193023", "type": "Company", "popularity": 51, "source": "wikidata:record_label+manual", "groups": [], "name": "Capitol Records", "aliases": ["Capitol", "Capitol Records", "캐피털 레코드"]}
+{"id": "Q193023", "type": "Company", "popularity": 51, "source": "wikidata:record_label+manual", "groups": [], "name": "Capitol Records", "aliases": ["Capitol", "Capitol Music Group", "Capitol Records", "캐피털 레코드"]}
 {"id": "Q212699", "type": "Company", "popularity": 42, "source": "wikidata:record_label+manual", "groups": [], "name": "Geffen Records", "aliases": ["Geffen", "Geffen Records", "LC 07266", "LC 7266", "게펜 레코드"]}
 {"id": "Q255363", "type": "Company", "popularity": 23, "source": "wikidata:record_label+manual", "groups": [], "name": "Starship Entertainment", "aliases": ["Starship", "Starship Entertainment", "스타쉽엔터테인먼트"]}
 {"id": "Q429296", "type": "Company", "popularity": 19, "source": "wikidata:record_label", "groups": [], "name": "MBK Entertainment", "aliases": ["MBK Entertainment", "코어콘텐츠미디어"]}
@@ -30237,3 +30237,89 @@
 {"id": "M_Artist_30252", "name": "Karol G", "type": "Artist", "aliases": ["Karol G"], "popularity": 60, "source": "manual", "groups": []}
 {"id": "M_Artist_30253", "name": "J Balvin", "type": "Artist", "aliases": ["J Balvin"], "popularity": 60, "source": "manual", "groups": []}
 {"id": "M_Artist_30254", "name": "Anitta", "type": "Artist", "aliases": ["Anitta"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30239", "name": "Qeelin", "type": "Brand", "aliases": ["Qeelin"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30240", "name": "Ray-Ban", "type": "Brand", "aliases": ["Ray Ban", "Ray-Ban"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30241", "name": "Chopard", "type": "Brand", "aliases": ["Chopard"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30242", "name": "Fred", "type": "Brand", "aliases": ["FRED Paris", "Fred", "Fred Jewelry"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30243", "name": "Jaeger-LeCoultre", "type": "Brand", "aliases": ["Jaeger-LeCoultre"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30244", "name": "Loro Piana", "type": "Brand", "aliases": ["Loro Piana"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30245", "name": "Hugo Boss", "type": "Brand", "aliases": ["BOSS", "Hugo Boss"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30246", "name": "Polo Ralph Lauren", "type": "Brand", "aliases": ["Polo Ralph Lauren"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30247", "name": "Alexander Wang", "type": "Brand", "aliases": ["Alexander Wang"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30248", "name": "Acne Studios", "type": "Brand", "aliases": ["Acne Studios"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30249", "name": "Maison Margiela", "type": "Brand", "aliases": ["Maison Margiela"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30250", "name": "Ganni", "type": "Brand", "aliases": ["Ganni"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30251", "name": "Mulberry", "type": "Brand", "aliases": ["Mulberry"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30252", "name": "Longchamp", "type": "Brand", "aliases": ["Longchamp"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30253", "name": "Kenzo", "type": "Brand", "aliases": ["Kenzo"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30254", "name": "Lanvin", "type": "Brand", "aliases": ["Lanvin"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30255", "name": "Roger Vivier", "type": "Brand", "aliases": ["Roger Vivier"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30256", "name": "Messika", "type": "Brand", "aliases": ["Messika"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30257", "name": "Tasaki", "type": "Brand", "aliases": ["Tasaki"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30258", "name": "Damiani", "type": "Brand", "aliases": ["Damiani"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30259", "name": "Graff", "type": "Brand", "aliases": ["Graff"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30260", "name": "Harry Winston", "type": "Brand", "aliases": ["Harry Winston"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30261", "name": "De Beers", "type": "Brand", "aliases": ["De Beers"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30262", "name": "Givenchy Beauty", "type": "Brand", "aliases": ["Givenchy Beauty"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30263", "name": "YSL Beauty", "type": "Brand", "aliases": ["YSL Beauty"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30264", "name": "Dior Beauty", "type": "Brand", "aliases": ["Dior Beauty"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30265", "name": "Chanel Beauty", "type": "Brand", "aliases": ["Chanel Beauty"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30266", "name": "Armani Beauty", "type": "Brand", "aliases": ["Armani Beauty"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30267", "name": "Prada Beauty", "type": "Brand", "aliases": ["Prada Beauty"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30268", "name": "Clio", "type": "Brand", "aliases": ["CLIO Cosmetics", "Clio"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30269", "name": "Rom&nd", "type": "Brand", "aliases": ["Rom&nd", "rom&nd"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30270", "name": "3CE", "type": "Brand", "aliases": ["3CE"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30271", "name": "Dr.Jart+", "type": "Brand", "aliases": ["Dr. Jart", "Dr.Jart+"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30272", "name": "Amorepacific", "type": "Brand", "aliases": ["AmorePacific", "Amorepacific"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30273", "name": "Espoir", "type": "Brand", "aliases": ["Espoir"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30274", "name": "Banila Co", "type": "Brand", "aliases": ["Banila Co"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30275", "name": "Etude", "type": "Brand", "aliases": ["ETUDE", "Etude", "Etude House"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30276", "name": "Nature Republic", "type": "Brand", "aliases": ["Nature Republic"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30277", "name": "Missha", "type": "Brand", "aliases": ["MISSHA", "Missha"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30278", "name": "The Face Shop", "type": "Brand", "aliases": ["The Face Shop"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30279", "name": "Mamonde", "type": "Brand", "aliases": ["Mamonde"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30280", "name": "Kérastase", "type": "Brand", "aliases": ["Kerastase", "Kérastase"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30281", "name": "Dolce & Gabbana Beauty", "type": "Brand", "aliases": ["D&G Beauty", "Dolce & Gabbana Beauty"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30282", "name": "Vivienne Westwood", "type": "Brand", "aliases": ["Vivienne Westwood"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30283", "name": "Moncler", "type": "Brand", "aliases": ["Moncler"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30284", "name": "Stone Island", "type": "Brand", "aliases": ["Stone Island"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30285", "name": "Onitsuka Tiger", "type": "Brand", "aliases": ["Onitsuka Tiger"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30286", "name": "Asics", "type": "Brand", "aliases": ["ASICS", "Asics"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30287", "name": "Vans", "type": "Brand", "aliases": ["Vans"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30288", "name": "Reebok", "type": "Brand", "aliases": ["Reebok"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30289", "name": "Skechers", "type": "Brand", "aliases": ["Skechers"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30290", "name": "Descente", "type": "Brand", "aliases": ["Descente"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30291", "name": "MLB Korea", "type": "Brand", "aliases": ["MLB Korea"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30292", "name": "Musinsa", "type": "Brand", "aliases": ["Musinsa"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30293", "name": "Olive Young", "type": "Brand", "aliases": ["Olive Young"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30294", "name": "Hyundai Card", "type": "Brand", "aliases": ["Hyundai Card"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30295", "name": "Samsonite", "type": "Brand", "aliases": ["Samsonite"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30296", "name": "Fila Korea", "type": "Brand", "aliases": ["FILA Korea", "Fila Korea"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30297", "name": "Coca-Cola Korea", "type": "Brand", "aliases": ["Coca-Cola Korea"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30298", "name": "Pocari Sweat", "type": "Brand", "aliases": ["Pocari Sweat"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30299", "name": "Chilsung Cider", "type": "Brand", "aliases": ["Chilsung Cider"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30300", "name": "Bacchus", "type": "Brand", "aliases": ["Bacchus"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30301", "name": "Hite Jinro", "type": "Brand", "aliases": ["Hite Jinro", "HiteJinro", "Jinro"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30302", "name": "Lotte Duty Free", "type": "Brand", "aliases": ["Lotte Duty Free"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30303", "name": "Shilla Duty Free", "type": "Brand", "aliases": ["Shilla Duty Free"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30304", "name": "Kakao Bank", "type": "Brand", "aliases": ["Kakao Bank", "KakaoBank"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30305", "name": "KB Kookmin Bank", "type": "Brand", "aliases": ["KB Kookmin Bank"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30306", "name": "Shinhan Bank", "type": "Brand", "aliases": ["Shinhan Bank"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30307", "name": "Woori Bank", "type": "Brand", "aliases": ["Woori Bank"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30308", "name": "SK Telecom", "type": "Brand", "aliases": ["SK Telecom"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30309", "name": "KT", "type": "Brand", "aliases": ["KT", "KT Corporation"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30310", "name": "LG Uplus", "type": "Brand", "aliases": ["LG Uplus"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30311", "name": "Galaxy Z Flip", "type": "Brand", "aliases": ["Galaxy Z Flip"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30312", "name": "Swatch", "type": "Brand", "aliases": ["Swatch"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30313", "name": "Cartier Beauty", "type": "Brand", "aliases": ["Cartier Beauty", "Cartier Parfums"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30314", "name": "Tissot", "type": "Brand", "aliases": ["Tissot"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30315", "name": "Longines", "type": "Brand", "aliases": ["Longines"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30316", "name": "IWC", "type": "Brand", "aliases": ["IWC", "IWC Schaffhausen"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30317", "name": "Vacheron Constantin", "type": "Brand", "aliases": ["Vacheron Constantin"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30318", "name": "Puma Korea", "type": "Brand", "aliases": ["PUMA Korea", "Puma Korea"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30319", "name": "Jordan", "type": "Brand", "aliases": ["Air Jordan", "Jordan"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30320", "name": "Vietjet", "type": "Brand", "aliases": ["Vietjet"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30321", "name": "Vinamilk", "type": "Brand", "aliases": ["Vinamilk"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30322", "name": "VPBank", "type": "Brand", "aliases": ["VPBank"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30323", "name": "Biti's", "type": "Brand", "aliases": ["Biti's"], "popularity": 60, "source": "manual", "groups": []}
+{"id": "M_Brand_30324", "name": "Highlands Coffee", "type": "Brand", "aliases": ["Highlands Coffee"], "popularity": 60, "source": "manual", "groups": []}

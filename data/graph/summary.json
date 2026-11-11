@@ -1,33 +1,32 @@
 {
-  "nodes": 4423,
-  "edges": 5778,
-  "dropped_rumor_mentions": 59,
+  "nodes": 4429,
+  "edges": 5658,
+  "dropped_rumor_mentions": 58,
   "node_types": {
-    "Group": 293,
-    "Album": 1155,
-    "Artist": 976,
-    "Song": 1793,
-    "Company": 85,
+    "Group": 292,
+    "Album": 1157,
+    "Artist": 990,
+    "Song": 1790,
+    "Company": 80,
     "Award": 25,
     "Event": 39,
-    "Brand": 57
+    "Brand": 56
   },
   "edge_types": {
-    "RELEASED": 2980,
-    "MEMBER_OF": 759,
+    "RELEASED": 2979,
+    "MEMBER_OF": 787,
     "LEFT_COMPANY": 114,
     "SIGNED_WITH": 102,
-    "PERFORMED_AT": 481,
-    "NOMINATED_FOR": 75,
-    "LEGAL_ACTION": 87,
-    "COLLABORATED_WITH": 272,
-    "WON_AWARD": 446,
+    "PERFORMED_AT": 478,
+    "NOMINATED_FOR": 74,
+    "COLLABORATED_WITH": 262,
+    "WON_AWARD": 445,
     "DEBUTED_UNDER": 145,
-    "BRAND_AMBASSADOR": 189,
+    "BRAND_AMBASSADOR": 147,
     "SUBSIDIARY_OF": 27,
     "LEFT_GROUP": 31,
     "RENEWED_CONTRACT": 39,
     "ACQUIRED_STAKE": 16,
-    "PRODUCED_FOR": 15
+    "PRODUCED_FOR": 12
   }
 }

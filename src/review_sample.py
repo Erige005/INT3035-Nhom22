@@ -41,16 +41,18 @@ def score():
     for r in rows:
         by[r["rel"]]["n"] += 1
         by[r["rel"]]["ok"] += int(r["label"])
-    n = sum(v["n"] for v in by.values())
-    ok = sum(v["ok"] for v in by.values())
-    # Ước lượng có trọng số: độ chính xác từng loại × tỷ trọng số cạnh của loại đó trong toàn đồ thị
     counts = defaultdict(int)
     for e in csv.DictReader(open(OUT_DIR / "edges.csv", encoding="utf-8")):
         counts[e["rel"]] += 1
-    total = sum(counts[k] for k in by)
-    weighted = sum(by[k]["ok"] / by[k]["n"] * counts[k] for k in by) / total if total else 0
+    # Chỉ tính các loại quan hệ còn trong đồ thị; loại đã bị loại bỏ được báo cáo riêng
+    kept = {k for k in by if counts[k]}
+    n = sum(by[k]["n"] for k in kept)
+    ok = sum(by[k]["ok"] for k in kept)
+    # Ước lượng có trọng số: độ chính xác từng loại × tỷ trọng số cạnh của loại đó trong toàn đồ thị
+    total = sum(counts[k] for k in kept)
+    weighted = sum(by[k]["ok"] / by[k]["n"] * counts[k] for k in kept) / total if total else 0
     res = {"sample": n, "correct": ok, "precision": ok / n if n else 0, "weighted_precision": weighted,
-           "by_rel": dict(sorted(by.items()))}
+           "excluded_from_graph": sorted(set(by) - kept), "by_rel": dict(sorted(by.items()))}
     json.dump(res, open(OUT_DIR / "quality_check.json", "w"), ensure_ascii=False, indent=2)
     print(json.dumps(res, ensure_ascii=False, indent=2))
 

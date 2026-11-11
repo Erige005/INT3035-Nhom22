@@ -1,183 +1,171 @@
 {
-  "nodes": 4423,
-  "edges": 5778,
-  "rel_types": 16,
-  "louvain_communities": 220,
-  "louvain_modularity": 0.7889394021629411,
+  "nodes": 4429,
+  "edges": 5658,
+  "rel_types": 15,
+  "louvain_communities": 219,
+  "louvain_modularity": 0.7982593551787334,
   "top_pagerank": [
     {
       "name": "Blackpink",
       "type": "Group",
-      "pagerank": 70.488,
-      "degree": 139
+      "pagerank": 89.836,
+      "degree": 122
     },
     {
       "name": "BTS",
       "type": "Group",
-      "pagerank": 60.089,
-      "degree": 137
-    },
-    {
-      "name": "Seventeen",
-      "type": "Group",
-      "pagerank": 36.869,
-      "degree": 93
-    },
-    {
-      "name": "Aespa",
-      "type": "Group",
-      "pagerank": 34.155,
-      "degree": 78
-    },
-    {
-      "name": "Stray Kids",
-      "type": "Group",
-      "pagerank": 33.884,
-      "degree": 102
+      "pagerank": 62.2,
+      "degree": 130
     },
     {
       "name": "Lisa",
       "type": "Artist",
-      "pagerank": 32.711,
-      "degree": 66
+      "pagerank": 40.239,
+      "degree": 64
+    },
+    {
+      "name": "Seventeen",
+      "type": "Group",
+      "pagerank": 38.772,
+      "degree": 90
     },
     {
       "name": "Jennie",
       "type": "Artist",
-      "pagerank": 30.498,
-      "degree": 90
+      "pagerank": 35.351,
+      "degree": 88
     },
     {
-      "name": "Le Sserafim",
+      "name": "Stray Kids",
       "type": "Group",
-      "pagerank": 26.346,
-      "degree": 68
+      "pagerank": 33.769,
+      "degree": 100
     },
     {
-      "name": "Ive",
+      "name": "Aespa",
       "type": "Group",
-      "pagerank": 26.09,
-      "degree": 62
-    },
-    {
-      "name": "Enhypen",
-      "type": "Group",
-      "pagerank": 26.014,
-      "degree": 67
+      "pagerank": 33.639,
+      "degree": 75
     },
     {
       "name": "Twice",
       "type": "Group",
-      "pagerank": 25.881,
+      "pagerank": 27.686,
       "degree": 64
+    },
+    {
+      "name": "SHINee",
+      "type": "Group",
+      "pagerank": 26.041,
+      "degree": 47
     },
     {
       "name": "Ateez",
       "type": "Group",
-      "pagerank": 25.843,
+      "pagerank": 25.94,
       "degree": 57
     },
     {
-      "name": "Grammy Awards",
-      "type": "Award",
-      "pagerank": 24.336,
-      "degree": 129
+      "name": "Enhypen",
+      "type": "Group",
+      "pagerank": 25.905,
+      "degree": 67
+    },
+    {
+      "name": "EXO",
+      "type": "Group",
+      "pagerank": 25.892,
+      "degree": 43
+    },
+    {
+      "name": "Le Sserafim",
+      "type": "Group",
+      "pagerank": 25.713,
+      "degree": 69
     },
     {
       "name": "Rosé",
       "type": "Artist",
-      "pagerank": 23.214,
+      "pagerank": 25.647,
+      "degree": 59
+    },
+    {
+      "name": "Ive",
+      "type": "Group",
+      "pagerank": 25.551,
       "degree": 60
     },
     {
       "name": "Jung Kook",
       "type": "Artist",
-      "pagerank": 22.905,
-      "degree": 52
-    },
-    {
-      "name": "EXO",
-      "type": "Group",
-      "pagerank": 22.87,
-      "degree": 48
-    },
-    {
-      "name": "Tomorrow X Together",
-      "type": "Group",
-      "pagerank": 22.72,
-      "degree": 60
+      "pagerank": 25.398,
+      "degree": 55
     },
     {
       "name": "NCT",
       "type": "Group",
-      "pagerank": 21.923,
+      "pagerank": 24.281,
       "degree": 42
+    },
+    {
+      "name": "Tomorrow X Together",
+      "type": "Group",
+      "pagerank": 23.575,
+      "degree": 59
+    },
+    {
+      "name": "Grammy Awards",
+      "type": "Award",
+      "pagerank": 22.523,
+      "degree": 128
     },
     {
       "name": "Zerobaseone",
       "type": "Group",
-      "pagerank": 20.92,
+      "pagerank": 21.513,
       "degree": 51
-    },
-    {
-      "name": "Illit",
-      "type": "Group",
-      "pagerank": 20.505,
-      "degree": 58
     }
   ],
   "top_communities": [
     {
-      "community": 4073,
+      "community": 1640,
       "size": 365,
       "top_members": [
         "BTS",
-        "Grammy Awards",
+        "Rosé",
         "Jung Kook",
-        "Coachella",
+        "Grammy Awards",
         "Jimin",
         "Taylor Swift"
       ]
     },
     {
-      "community": 3996,
-      "size": 344,
-      "top_members": [
-        "EXO",
-        "NCT",
-        "SHINee",
-        "SM Entertainment",
-        "Red Velvet",
-        "Super Junior"
-      ]
-    },
-    {
-      "community": 3989,
-      "size": 337,
+      "community": 4230,
+      "size": 296,
       "top_members": [
         "Blackpink",
         "Lisa",
         "Jennie",
-        "Rosé",
         "BigBang",
-        "YG Entertainment"
+        "Jisoo",
+        "G-Dragon"
       ]
     },
     {
-      "community": 3995,
-      "size": 193,
+      "community": 1585,
+      "size": 232,
       "top_members": [
-        "Le Sserafim",
-        "Illit",
-        "NewJeans",
-        "Hybe",
-        "The Show",
-        "ADOR"
+        "SHINee",
+        "Red Velvet",
+        "Super Junior",
+        "Lee Taemin",
+        "SM Entertainment",
+        "NCT 127"
       ]
     },
     {
-      "community": 4099,
-      "size": 154,
+      "community": 4335,
+      "size": 177,
       "top_members": [
         "Ateez",
         "Inkigayo",
@@ -188,39 +176,51 @@
       ]
     },
     {
-      "community": 1725,
-      "size": 153,
+      "community": 4316,
+      "size": 147,
       "top_members": [
-        "Stray Kids",
-        "Cravity",
-        "Kim Seok-jin",
-        "Wendy",
-        "(5-STAR)",
-        "KARMA"
+        "Ive",
+        "NCT Dream",
+        "STAYC",
+        "Plave",
+        "Gayo Daejeon",
+        "&TEAM"
       ]
     },
     {
-      "community": 1582,
-      "size": 139,
+      "community": 21,
+      "size": 142,
+      "top_members": [
+        "Seventeen",
+        "2PM",
+        "Lim Yoona",
+        "Kim Min-gyu",
+        "Dino",
+        "Daesang"
+      ]
+    },
+    {
+      "community": 46,
+      "size": 142,
+      "top_members": [
+        "NewJeans",
+        "TWS",
+        "Hybe",
+        "Fifty Fifty",
+        "GFriend",
+        "Momoland"
+      ]
+    },
+    {
+      "community": 124,
+      "size": 141,
       "top_members": [
         "I-dle",
         "BtoB",
-        "Highlight",
         "Yook Sung-jae",
+        "Highlight",
         "Pentagon",
         "Song Yuqi"
-      ]
-    },
-    {
-      "community": 42,
-      "size": 136,
-      "top_members": [
-        "Seventeen",
-        "Girls' Generation",
-        "2PM",
-        "Sooyoung",
-        "Lim Yoona",
-        "Daesang"
       ]
     }
   ]

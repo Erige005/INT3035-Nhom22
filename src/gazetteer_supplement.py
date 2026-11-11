@@ -60,7 +60,8 @@ def main():
     manual = json.load(open(CONFIG / "manual_entities.json", encoding="utf-8"))
     by_name = {e["name"].lower(): e for e in ents if e["type"] in ("Artist", "Group")}
     groups = {e["name"].lower(): e["id"] for e in ents if e["type"] == "Group"}
-    for etype in ("Group", "Artist"):
+    by_name.update({e["name"].lower(): e for e in ents if e["type"] in ("Brand", "Company", "Award", "Event")})
+    for etype in ("Group", "Artist", "Brand", "Company", "Award", "Event"):
       for name, aliases in manual.get(etype, {}).items():
         e = by_name.get(name.lower())
         if e is None:

@@ -2,10 +2,10 @@
   "articles": 33118,
   "articles_en": 10634,
   "sentences": 694132,
-  "mentions": 449986,
-  "articles_with_relations": 10307,
+  "mentions": 457942,
+  "articles_with_relations": 12167,
   "articles_vi": 22484,
-  "member_conflict_dropped": 413,
+  "member_conflict_dropped": 495,
   "dup_articles": 84,
-  "relation_mentions": 29676
+  "relation_mentions": 38072
 }

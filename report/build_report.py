@@ -227,63 +227,66 @@ p("Đề tài 24 yêu cầu xây dựng mạng lưới kết nối các ngôi sa
 p("Phạm vi được nhóm lựa chọn: toàn bộ K-Pop và nhạc US-UK (không thu hẹp), với mục tiêu tối thiểu "
   "2.000 nút, 5.000 cạnh và 10 loại quan hệ. Dữ liệu là bài báo tiếng Việt (nguồn chính) và tiếng Anh "
   f"(bổ sung) đăng trong khoảng {DATE_MIN} – {DATE_MAX}.")
-p("Ý nghĩa kinh doanh: mạng cho phép trả lời các câu hỏi như nhãn hàng nào đang dùng idol nào làm đại sứ, "
-  "nghệ sĩ nào có sức ảnh hưởng trung tâm (centrality) để lựa chọn cho chiến dịch influencer marketing, "
-  "các cụm cộng đồng nghệ sĩ – công ty – nhãn hàng, và theo dõi biến động hợp đồng/tranh chấp pháp lý "
-  "giữa nghệ sĩ và công ty quản lý (ví dụ vụ NewJeans – ADOR – HYBE).")
+p("Trọng tâm của mạng là lớp lõi nghệ sĩ – công ty – nhãn hàng: nghệ sĩ/nhóm nhạc trực thuộc, ký, tái ký "
+  "hoặc rời công ty quản lý nào; các công ty là công ty con của tập đoàn nào; nghệ sĩ nào làm đại sứ cho nhãn "
+  "hàng nào. Lớp bài hát/album được giữ làm lớp phụ, mô tả sản phẩm âm nhạc mà nghệ sĩ phát hành.")
+p("Ý nghĩa kinh doanh: (1) với nhãn hàng — biết idol nào đang là đại sứ của đối thủ, idol nào có độ trung tâm "
+  "cao (PageRank, bậc) để lựa chọn cho chiến dịch influencer marketing; (2) với nhà đầu tư/đối tác — theo dõi "
+  "biến động hợp đồng của nghệ sĩ (ký mới, tái ký, rời công ty) và cấu trúc sở hữu giữa các tập đoàn (HYBE, "
+  "SM, YG, JYP, Kakao…); (3) phát hiện các cụm cộng đồng nghệ sĩ – công ty – nhãn hàng. Quan hệ tranh chấp "
+  "pháp lý đã được thử trích xuất nhưng độ chính xác chưa đạt (mục 8) nên chưa đưa vào đồ thị; theo dõi "
+  "tranh chấp được chuyển sang hướng phát triển.")
 
 h("2.2. Lựa chọn nút", 2)
 p("Nguyên tắc: mỗi nút là một thực thể có danh tính rõ ràng trong ngành giải trí, và chỉ đưa vào đồ thị khi "
   "tham gia ít nhất một quan hệ nghiệp vụ được trích xuất từ báo. Nhóm KHÔNG dùng bài báo, câu văn hay "
   "từ khóa làm nút; bài báo và câu dẫn chứng chỉ là metadata gắn trên cạnh.")
 nt = st["node_types"]
-table(["Loại nút", "Ý nghĩa", "Ví dụ", "Số nút"],
-      [[k, NODE_DESC[k][0], NODE_DESC[k][1], fmt(nt.get(k, 0))] for k in NODE_DESC],
-      widths=[2.2, 5.3, 6.5, 2])
+table(["Loại nút", "Lớp", "Ý nghĩa", "Ví dụ", "Số nút"],
+      [[k, "Phụ" if k in ("Song", "Album") else "Lõi", NODE_DESC[k][0], NODE_DESC[k][1], fmt(nt.get(k, 0))]
+       for k in NODE_DESC], widths=[2, 1.3, 4.7, 6, 2])
 _works = nt.get("Song", 0) + nt.get("Album", 0)
-p(f"Tổng số nút: {fmt(st['nodes'])}, trong đó {fmt(_works)} nút tác phẩm (bài hát/album, {_works / st['nodes']:.0%}) và "
-  f"{fmt(st['nodes'] - _works)} nút người/tổ chức/sự kiện. Tác phẩm được giữ làm nút tương tự cách đề bài lấy ví dụ "
-  "'quan hệ giữa các diễn viên thông qua các bộ phim': chúng là thực thể có tên riêng, được trích từ báo và nối các "
-  "nghệ sĩ với nhau. Thuộc tính của nút: id (mã Wikidata QID nếu có, hoặc mã nội bộ), "
-  "name (tên chuẩn), type, popularity (số liên kết Wikipedia – dùng để khử nhập nhằng), mentions (số lần "
-  "xuất hiện trong quan hệ).")
+p(f"Tổng số nút: {fmt(st['nodes'])}. Lớp lõi (nghệ sĩ, nhóm, công ty, nhãn hàng, giải thưởng, sự kiện) có "
+  f"{fmt(st['nodes'] - _works)} nút, trong đó {fmt(st['core_nodes'])} nút có quan hệ với một nút lõi khác; lớp phụ "
+  f"có {fmt(_works)} nút bài hát/album ({_works / st['nodes']:.0%}). Lớp phụ giúp nối các nghệ sĩ qua sản phẩm "
+  "chung (tương tự ví dụ 'diễn viên nối với nhau qua bộ phim' của đề bài), nhưng phần phân tích kinh doanh tập "
+  "trung vào lớp lõi. Thuộc tính của nút: id (mã Wikidata QID nếu có, hoặc mã nội bộ), name (tên chuẩn), type, "
+  "popularity (số liên kết Wikipedia – dùng để khử nhập nhằng), mentions (số lần xuất hiện trong quan hệ).")
 
 h("2.3. Lựa chọn cạnh (loại quan hệ)", 2)
-p("Cạnh được thiết kế theo nghiệp vụ của đề tài (Debut/Tái ký hợp đồng, Kiện chấm dứt hợp đồng, Hợp tác "
-  "toàn cầu, Đại diện thời trang) và được mở rộng để mô tả đầy đủ vòng đời nghệ sĩ. Mỗi loại cạnh có ràng "
-  "buộc kiểu nút nguồn → nút đích, nên một cạnh chỉ được tạo khi hai thực thể đúng loại cùng xuất hiện "
-  "trong một câu có từ kích hoạt tương ứng.")
+p("Cạnh được thiết kế theo nghiệp vụ của đề tài (Ra mắt/Tái ký hợp đồng, Hợp tác toàn cầu, Đại diện thời trang) "
+  "và được mở rộng để mô tả vòng đời nghệ sĩ. Mỗi loại cạnh có ràng buộc kiểu nút nguồn → nút đích, nên một cạnh "
+  "chỉ được tạo khi hai thực thể đúng loại cùng xuất hiện trong một câu có từ kích hoạt tương ứng.")
 et = st["edge_types"]
 rows = []
 for name, desc, _, stypes, otypes, sym in REL_RULES:
-    rows.append([name, desc, "/".join(stypes) + (" ↔ " if sym else " → ") + "/".join(otypes), fmt(et.get(name, 0))])
-table(["Loại quan hệ", "Ý nghĩa", "Nguồn → Đích", "Số cạnh"], rows, widths=[4, 5.8, 4.5, 1.8], size=10)
-p(f"Tổng số cạnh (bộ ba duy nhất nguồn – quan hệ – đích): {fmt(st['edges'])}; số loại quan hệ có cạnh: "
-  f"{st['relation_types']}. Thuộc tính cạnh: support (số bài báo khác nhau làm dẫn chứng), first_date/"
-  "last_date (ngày bài báo sớm/muộn nhất), langs, sources, evidence_sentences và evidence_urls (tối đa 3 câu "
-  "dẫn chứng kèm URL).")
+    if name not in et:
+        continue
+    layer = "Phụ" if set(otypes) <= {"Song", "Album"} else "Lõi"
+    rows.append([name, layer, desc, "/".join(stypes) + (" ↔ " if sym else " → ") + "/".join(otypes),
+                 fmt(et.get(name, 0))])
+table(["Loại quan hệ", "Lớp", "Ý nghĩa", "Nguồn → Đích", "Số cạnh"], rows, widths=[3.8, 1.2, 4.8, 4.4, 1.8],
+      size=9.5)
+p(f"Tổng số cạnh (bộ ba duy nhất nguồn – quan hệ – đích): {fmt(st['edges'])}, gồm {fmt(st['core_edges'])} cạnh "
+  f"giữa các nút lõi và {fmt(st['work_edges'])} cạnh nối tới lớp bài hát/album; số loại quan hệ: "
+  f"{st['relation_types']}. Quan hệ LEGAL_ACTION (kiện tụng/tranh chấp) đã được xây dựng luật trích xuất nhưng bị "
+  "loại khỏi đồ thị vì độ chính xác trên mẫu chỉ khoảng 51% (mục 8). Thuộc tính cạnh: support (số bài báo khác "
+  "nhau làm dẫn chứng), first_date/last_date (ngày bài báo sớm/muộn nhất), langs, sources, evidence_sentences "
+  "và evidence_urls (tối đa 3 câu dẫn chứng kèm URL).")
 
 h("2.4. Ví dụ cạnh kèm dẫn chứng", 2)
-random.seed(7)
-shown = []
-by_rel = {}
-for e in sorted(evid, key=lambda x: -x["support"]):
-    by_rel.setdefault(e["rel"], []).append(e)
-names = {}
+p("Các ví dụ dưới đây được chọn trong số những cạnh đã được kiểm tra là đúng ở mục 8 (mỗi loại quan hệ một ví "
+  "dụ, ưu tiên câu ngắn).")
 import csv  # noqa: E402
-for r in csv.DictReader(open(OUT_DIR / "nodes.csv", encoding="utf-8")):
-    names[r["id"]] = r["name"]
-coref_only = {(r["src"], r["rel"], r["dst"]) for r in csv.DictReader(open(OUT_DIR / "edges.csv", encoding="utf-8"))
-              if r.get("coref_only") == "1"}
+rev = [r for r in csv.DictReader(open(OUT_DIR / "review_sample.csv", encoding="utf-8")) if r.get("label") == "1"]
 ex_rows = []
 for rel in [r[0] for r in REL_RULES]:
-    lst = [e for e in by_rel.get(rel, []) if (e["src"], e["rel"], e["dst"]) not in coref_only]
-    if not lst:
+    cands = [r for r in rev if r["rel"] == rel and rel in st["edge_types"]]
+    if not cands:
         continue
-    e = lst[min(2, len(lst) - 1)]
-    s = min((x["sentence"] for x in e["evidence"]), key=len)  # câu dẫn chứng ngắn gọn nhất
-    ex_rows.append([f"{names.get(e['src'], e['src'])} –[{rel}]→ {names.get(e['dst'], e['dst'])}",
-                    (s[:230] + "…") if len(s) > 230 else s, e["support"]])
+    r = min(cands, key=lambda x: (not 40 <= len(x["sentence"]) <= 200, int(x["support"]) < 2, len(x["sentence"])))
+    s = r["sentence"]
+    ex_rows.append([f"{r['src']} –[{rel}]→ {r['dst']}", (s[:230] + "…") if len(s) > 230 else s, r["support"]])
 table(["Cạnh", "Câu dẫn chứng (trích từ báo)", "Support"], ex_rows, widths=[5, 9.5, 1.5], size=9.5)
 
 # ================================================================ 3. STACK
@@ -414,8 +417,18 @@ table(["Chỉ số", "Giá trị"], [
     ["Số cộng đồng Louvain (NetworkX) / modularity",
      f"{st.get('louvain_communities', '-')} / {st.get('louvain_modularity', 0):.3f}"],
 ], widths=[10, 6])
+p("Vì lớp bài hát/album chiếm nhiều nút, nhóm thống kê riêng đồ thị lõi — phần phục vụ trực tiếp bài toán "
+  "nghệ sĩ – công ty – nhãn hàng:")
+table(["Đồ thị lõi (không gồm bài hát/album)", "Giá trị"], [
+    ["Số nút có quan hệ lõi", fmt(st["core_nodes"])],
+    ["  – theo loại", ", ".join(f"{k} {fmt(v)}" for k, v in st["core_node_types"].items())],
+    ["Số cạnh lõi", fmt(st["core_edges"])],
+    ["Số loại quan hệ lõi", len(st["core_edge_types"])],
+    ["Lớp phụ: nút bài hát/album / cạnh nối tới lớp phụ", f"{fmt(st['work_nodes'])} / {fmt(st['work_edges'])}"],
+], widths=[8, 8], size=10)
 fig("node_types.png", "Hình 2. Số nút theo loại thực thể", 13)
-fig("edge_types.png", "Hình 3. Số cạnh theo loại quan hệ", 14)
+fig("edge_types.png", "Hình 3. Số cạnh theo loại quan hệ (toàn bộ đồ thị)", 13)
+fig("core_edge_types.png", "Hình 3b. Số cạnh theo loại quan hệ trong đồ thị lõi", 13)
 fig("degree_distribution.png", "Hình 4. Phân bố bậc trên thang log–log", 12)
 p("Phân bố bậc có đuôi dài: phần lớn nút có bậc nhỏ, một số ít nút (idol/nhóm/công ty lớn) có bậc rất cao, "
   "phù hợp với tính chất power-law thường gặp ở mạng xã hội. Đường đi ngắn nhất trung bình nhỏ so với kích "
@@ -429,20 +442,35 @@ table(["Nhãn hàng (bậc)", "Công ty (bậc)", "Nhóm nhạc (bậc)", "Ngh�
       [[f"{x[0]} ({x[1]})" if x else "" for x in row] for row in zip(
           st["top_brand_by_degree"], st["top_company_by_degree"], st["top_group_by_degree"],
           st["top_artist_by_degree"])], widths=[4, 4, 4, 4], size=9.5)
-fig("top60_subgraph.png", "Hình 6. Đồ thị con gồm 60 nút có bậc cao nhất", 16)
+fig("top60_subgraph.png", "Hình 6. Đồ thị lõi: 60 nút có bậc cao nhất (không gồm bài hát/album)", 16)
 
 # ================================================================ 8. KẾT LUẬN
 h("8. Đánh giá sơ bộ chất lượng", 1)
 if qc:
-    p(f"Lấy mẫu ngẫu nhiên phân tầng {qc['sample']} cạnh (mỗi loại quan hệ tối đa {max(v['n'] for v in qc['by_rel'].values())} "
-      "cạnh, file data/graph/review_sample.csv) và đánh giá đúng/sai bằng cách đọc câu dẫn chứng: cạnh đúng khi "
-      f"câu thể hiện đúng loại quan hệ và đúng chiều. Tỷ lệ đúng trên mẫu phân tầng: {qc['precision']:.1%}; khi "
-      f"quy đổi theo tỷ trọng số cạnh thực tế của từng loại quan hệ: {qc['weighted_precision']:.1%}. Trong quá trình "
-      "xây dựng, việc kiểm tra này được lặp lại ba lượt để sửa luật (59% → 71% → 76% trên mẫu phân tầng). Đây là "
-      "kiểm tra sơ bộ trên mẫu nhỏ, chưa phải đánh giá chính thức; theo đề bài, chỉ tiêu chất lượng ≥ 90% sẽ được "
-      "đánh giá ở bài tập cuối kỳ.")
-    table(["Loại quan hệ", "Số mẫu", "Đúng", "Tỷ lệ"],
-          [[k, v["n"], v["ok"], f"{v['ok'] / v['n']:.0%}"] for k, v in qc["by_rel"].items()], widths=[6, 3, 3, 3])
+    _all = qc["by_rel"]
+    _n_all = sum(v["n"] for v in _all.values())
+    _ok_all = sum(v["ok"] for v in _all.values())
+    _excl = qc.get("excluded_from_graph", [])
+    p(f"Lấy mẫu ngẫu nhiên phân tầng tối đa {max(v['n'] for v in _all.values())} cạnh cho mỗi loại quan hệ (loại có ít "
+      f"cạnh hơn thì lấy toàn bộ), tổng {_n_all} cạnh (file data/graph/review_sample.csv). Mỗi cạnh được đánh giá "
+      "đúng/sai bằng cách đọc câu dẫn chứng: cạnh đúng khi câu thể hiện đúng loại quan hệ, đúng hai thực thể và "
+      "đúng chiều; cạnh sai được ghi lý do ở cột note (ví dụ: chủ thể là thành viên chứ không phải cả nhóm, tin đồn, "
+      "ngữ cảnh phim ảnh, sai chiều). Với 30–35 mẫu mỗi loại, một cạnh chỉ ảnh hưởng khoảng 3% tới tỷ lệ của loại đó.")
+    table(["Loại quan hệ", "Số mẫu", "Đúng", "Tỷ lệ", "Ghi chú"],
+          [[k, v["n"], v["ok"], f"{v['ok'] / v['n']:.0%}", "Đã loại khỏi đồ thị" if k in _excl else ""]
+           for k, v in sorted(_all.items(), key=lambda x: -x[1]["ok"] / x[1]["n"])], widths=[5.6, 1.7, 1.7, 1.7, 5.3], size=10)
+    p(f"Trên toàn bộ {_n_all} mẫu (16 loại) tỷ lệ đúng là {_ok_all / _n_all:.1%}. LEGAL_ACTION chỉ đạt "
+      f"{_all['LEGAL_ACTION']['ok']}/{_all['LEGAL_ACTION']['n']} "
+      f"({_all['LEGAL_ACTION']['ok'] / _all['LEGAL_ACTION']['n']:.0%}): lỗi chủ yếu do từ 'kiện', 'tố cáo' xuất hiện "
+      "trong câu kể nhiều bên (fan kiện, kiện người bôi nhọ nghệ sĩ, cựu CEO thay vì công ty), không đủ tin cậy để "
+      "phục vụ mục tiêu theo dõi tranh chấp. Vì vậy nhóm loại LEGAL_ACTION khỏi đồ thị và điều chỉnh phát biểu ý "
+      "nghĩa kinh doanh ở mục 2.1. "
+      f"Trên {len(_all) - len(_excl)} loại còn lại: tỷ lệ đúng trên mẫu {qc['precision']:.1%}; quy đổi theo tỷ trọng "
+      f"số cạnh thực tế của từng loại: {qc['weighted_precision']:.1%}.")
+    p("Các loại còn yếu là COLLABORATED_WITH, ACQUIRED_STAKE và DEBUTED_UNDER (khoảng 40–51%). Chúng vẫn được giữ "
+      "vì gắn trực tiếp với mô tả đề tài (Ra mắt, Hợp tác toàn cầu) và cấu trúc sở hữu tập đoàn, nhưng cần được "
+      "ưu tiên cải thiện. Đây là kiểm tra sơ bộ; theo đề bài, chỉ tiêu chất lượng ≥ 90% sẽ được đánh giá ở bài tập "
+      "cuối kỳ.")
 else:
     p("Chưa thực hiện đánh giá độ chính xác có gán nhãn ở đợt nộp này (theo đề bài, chỉ tiêu ≥ 90% đánh giá ở "
       "bài tập cuối kỳ).")
@@ -459,28 +487,37 @@ for s in [
     "Toàn bộ cạnh có dẫn chứng là câu văn và URL bài báo, truy vết được nguồn gốc.",
     "Dữ liệu song ngữ Việt – Anh từ 5 trang báo, pipeline tự động hoàn toàn và chạy lại được.",
     "Đồ thị lưu trên Neo4j, đã chạy thử thuật toán PageRank, Louvain, Degree bằng GDS.",
+    f"Đánh giá chất lượng trên mẫu {sum(v['n'] for v in qc['by_rel'].values())} cạnh; loại bỏ quan hệ không đủ tin cậy "
+    "(LEGAL_ACTION) thay vì giữ để tăng số lượng." if qc else "",
 ]:
-    bullet(s)
+    if s:
+        bullet(s)
 h("9.2. Chưa đạt / hạn chế", 2)
 for s in [
-    "Độ chính xác ước lượng hiện ở mức khoảng 76–84% (mẫu 160 cạnh), chưa đạt mức ≥ 90%; các quan hệ yếu nhất là "
-    "LEGAL_ACTION, COLLABORATED_WITH và ACQUIRED_STAKE. Chưa đo recall.",
-    "Nút tác phẩm (bài hát/album) chiếm tỷ trọng lớn; nếu chỉ tính nút người/tổ chức thì số nút thấp hơn 2.000.",
+    f"Độ chính xác ước lượng {qc['precision']:.1%} trên mẫu ({qc['weighted_precision']:.1%} theo tỷ trọng cạnh), chưa đạt "
+    "mức ≥ 90%; COLLABORATED_WITH, ACQUIRED_STAKE, DEBUTED_UNDER còn yếu. Chưa đo recall." if qc else "",
+    f"Lớp lõi nghệ sĩ – công ty – nhãn hàng mới có {fmt(st['core_nodes'])} nút và {fmt(st['core_edges'])} cạnh; chỉ "
+    "tiêu 2.000 nút/5.000 cạnh đạt được nhờ lớp phụ bài hát/album. Số nhãn hàng và công ty còn ít so với thực tế.",
+    "Chưa theo dõi được tranh chấp pháp lý (LEGAL_ACTION bị loại do độ chính xác thấp).",
     "Trích xuất quan hệ bằng luật nên bỏ sót các câu diễn đạt gián tiếp và có thể gán sai chiều ở câu phức nhiều thực thể.",
     "NER phụ thuộc từ điển: nghệ sĩ mới/ít nổi tiếng chưa có trong Wikidata sẽ không được nhận dạng; tên ngắn dễ nhập nhằng (V, Jin, Joy…).",
     "Đồng tham chiếu mới ở mức luật đơn giản (đại từ đầu câu → nhân vật trong tiêu đề); các trường hợp phức tạp hơn "
     "(nhóm, nam ca sĩ ở giữa câu, nhiều nhân vật) chưa được khai thác.",
     "Quan hệ có tính thời điểm (ký/rời hợp đồng) mới chỉ lưu ngày bài báo, chưa chuẩn hóa thời gian hiệu lực.",
 ]:
-    bullet(s)
+    if s:
+        bullet(s)
 h("9.3. Hướng phát triển cho bài cuối kỳ", 2)
 for s in [
-    "Gán nhãn tay 500–1.000 câu để đo độ chính xác và huấn luyện mô hình phân loại quan hệ (PhoBERT/XLM-R).",
+    "Mở rộng lớp lõi: thêm nhãn hàng/công ty vào từ điển, tăng độ phủ cho quan hệ đại sứ và hợp đồng.",
+    "Viết lại luật LEGAL_ACTION (xác định đúng bên kiện/bị kiện, loại câu kể gián tiếp) rồi đánh giá lại trước khi đưa vào đồ thị.",
+    "Dùng các cạnh đã gán nhãn (data/graph/review_sample.csv) làm dữ liệu huấn luyện mô hình phân loại quan hệ (PhoBERT/XLM-R).",
     "Dùng LLM miễn phí (ví dụ Gemini free tier) để kiểm chứng lại các cạnh support = 1.",
     "Bổ sung đồng tham chiếu và chuẩn hóa thực thể mới (entity linking).",
     "Phân tích cộng đồng, dự đoán liên kết (idol – nhãn hàng), xếp hạng người ảnh hưởng.",
 ]:
-    bullet(s)
+    if s:
+        bullet(s)
 
 h("10. Mã nguồn", 1)
 p(f"Link GitHub: {GITHUB_URL}")

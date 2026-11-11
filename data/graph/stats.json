@@ -1,71 +1,98 @@
 {
-  "nodes": 4423,
-  "edges": 5778,
-  "relation_types": 16,
+  "nodes": 4429,
+  "edges": 5658,
+  "relation_types": 15,
   "node_types": {
-    "Song": 1793,
-    "Album": 1155,
-    "Artist": 976,
-    "Group": 293,
-    "Company": 85,
-    "Brand": 57,
+    "Song": 1790,
+    "Album": 1157,
+    "Artist": 990,
+    "Group": 292,
+    "Company": 80,
+    "Brand": 56,
     "Event": 39,
     "Award": 25
   },
   "edge_types": {
-    "RELEASED": 2980,
-    "MEMBER_OF": 759,
-    "PERFORMED_AT": 481,
-    "WON_AWARD": 446,
-    "COLLABORATED_WITH": 272,
-    "BRAND_AMBASSADOR": 189,
+    "RELEASED": 2979,
+    "MEMBER_OF": 787,
+    "PERFORMED_AT": 478,
+    "WON_AWARD": 445,
+    "COLLABORATED_WITH": 262,
+    "BRAND_AMBASSADOR": 147,
     "DEBUTED_UNDER": 145,
     "LEFT_COMPANY": 114,
     "SIGNED_WITH": 102,
-    "LEGAL_ACTION": 87,
-    "NOMINATED_FOR": 75,
+    "NOMINATED_FOR": 74,
     "RENEWED_CONTRACT": 39,
     "LEFT_GROUP": 31,
     "SUBSIDIARY_OF": 27,
     "ACQUIRED_STAKE": 16,
-    "PRODUCED_FOR": 15
+    "PRODUCED_FOR": 12
   },
-  "edges_support_ge2": 2323,
+  "edges_support_ge2": 2313,
+  "core_nodes": 1383,
+  "core_edges": 2679,
+  "core_node_types": {
+    "Artist": 922,
+    "Group": 261,
+    "Company": 80,
+    "Brand": 56,
+    "Event": 39,
+    "Award": 25
+  },
+  "core_edge_types": {
+    "MEMBER_OF": 787,
+    "PERFORMED_AT": 478,
+    "WON_AWARD": 445,
+    "COLLABORATED_WITH": 262,
+    "BRAND_AMBASSADOR": 147,
+    "DEBUTED_UNDER": 145,
+    "LEFT_COMPANY": 114,
+    "SIGNED_WITH": 102,
+    "NOMINATED_FOR": 74,
+    "RENEWED_CONTRACT": 39,
+    "LEFT_GROUP": 31,
+    "SUBSIDIARY_OF": 27,
+    "ACQUIRED_STAKE": 16,
+    "PRODUCED_FOR": 12
+  },
+  "work_nodes": 2947,
+  "work_edges": 2979,
   "edge_langs": {
-    "en": 3709,
-    "vi": 1615,
-    "en|vi": 454
+    "en": 3684,
+    "vi": 1486,
+    "en|vi": 488
   },
   "edge_sources": {
-    "soompi": 4163,
-    "kenh14": 1683,
-    "tuoitre": 416,
-    "thanhnien": 377,
-    "znews": 221
+    "soompi": 4172,
+    "kenh14": 1616,
+    "tuoitre": 413,
+    "thanhnien": 374,
+    "znews": 227
   },
-  "undirected_simple_edges": 5467,
-  "density": 0.0005590406547412159,
-  "avg_degree": 2.6127063079357904,
-  "max_degree": 139,
-  "connected_components": 180,
-  "largest_component_nodes": 3829,
-  "largest_component_ratio": 0.865702012208908,
-  "avg_clustering": 0.02101426627229613,
-  "transitivity": 0.0255863539445629,
-  "avg_shortest_path_lcc_sampled": 4.97473354231975,
+  "undirected_simple_edges": 5397,
+  "density": 0.0005503882087816137,
+  "avg_degree": 2.5549785504628586,
+  "max_degree": 130,
+  "connected_components": 179,
+  "largest_component_nodes": 3831,
+  "largest_component_ratio": 0.8649808083088734,
+  "avg_clustering": 0.01992369775710116,
+  "transitivity": 0.022721986833988937,
+  "avg_shortest_path_lcc_sampled": 5.054003481288077,
   "diameter_lcc_sampled_lower_bound": 15,
   "top_degree": [
     [
       "BTS (Group)",
-      124
+      118
     ],
     [
       "Blackpink (Group)",
-      122
+      108
     ],
     [
       "Stray Kids (Group)",
-      98
+      96
     ],
     [
       "Grammy Awards (Award)",
@@ -73,7 +100,7 @@
     ],
     [
       "Seventeen (Group)",
-      89
+      86
     ],
     [
       "Jennie (Artist)",
@@ -81,19 +108,15 @@
     ],
     [
       "Aespa (Group)",
-      76
+      73
+    ],
+    [
+      "Le Sserafim (Group)",
+      66
     ],
     [
       "Enhypen (Group)",
       66
-    ],
-    [
-      "Le Sserafim (Group)",
-      65
-    ],
-    [
-      "SM Entertainment (Company)",
-      62
     ],
     [
       "Twice (Group)",
@@ -101,95 +124,103 @@
     ],
     [
       "Ive (Group)",
-      61
-    ],
-    [
-      "NewJeans (Group)",
       59
-    ],
-    [
-      "Lisa (Artist)",
-      58
     ],
     [
       "Riize (Group)",
       58
+    ],
+    [
+      "Tomorrow X Together (Group)",
+      57
+    ],
+    [
+      "SM Entertainment (Company)",
+      57
+    ],
+    [
+      "Lisa (Artist)",
+      56
     ]
   ],
   "top_betweenness": [
     [
       "Show Champion (Event)",
-      0.1115
+      0.1203
     ],
     [
       "Music Bank (Event)",
-      0.1086
+      0.1152
     ],
     [
       "SM Entertainment (Company)",
-      0.107
+      0.1026
     ],
     [
       "Inkigayo (Event)",
-      0.1016
+      0.0977
     ],
     [
       "BTS (Group)",
-      0.0989
-    ],
-    [
-      "Blackpink (Group)",
-      0.0884
+      0.0896
     ],
     [
       "The Show (Event)",
-      0.0852
+      0.087
     ],
     [
       "Show! Music Core (Event)",
-      0.0799
+      0.0769
     ],
     [
       "Seventeen (Group)",
-      0.0604
+      0.0698
+    ],
+    [
+      "Blackpink (Group)",
+      0.0669
     ],
     [
       "M Countdown (Event)",
-      0.0594
-    ],
-    [
-      "Stray Kids (Group)",
-      0.0585
-    ],
-    [
-      "Gayo Daejeon (Event)",
-      0.051
+      0.0639
     ],
     [
       "I-dle (Group)",
-      0.0481
+      0.0575
     ],
     [
-      "Jennie (Artist)",
-      0.0478
+      "MAMA Awards (Award)",
+      0.0522
     ],
     [
-      "Grammy Awards (Award)",
-      0.0472
+      "Gayo Daejeon (Event)",
+      0.0514
+    ],
+    [
+      "Stray Kids (Group)",
+      0.0505
+    ],
+    [
+      "Aespa (Group)",
+      0.0497
     ]
   ],
   "top_pagerank": [
+    [
+      "Hybe (Company)",
+      0.009
+    ],
     [
       "Grammy Awards (Award)",
       0.0071
     ],
     [
-      "Hybe (Company)",
-      0.0051
+      "SM Entertainment (Company)",
+      0.0058
     ],
     [
-      "SM Entertainment (Company)",
-      0.0046
+      "Kakao Entertainment (Company)",
+      0.0052
     ],
     [
       "YG Entertainment (Company)",
@@ -200,19 +231,23 @@
       0.0023
     ],
     [
-      "B.I (Artist)",
-      0.0022
-    ],
-    [
       "Waterbomb (Event)",
       0.002
     ],
     [
-      "MAMA Awards (Award)",
+      "Source Music (Company)",
       0.0017
     ],
     [
-      "Blackpink (Group)",
+      "MAMA Awards (Award)",
+      0.0016
+    ],
+    [
+      "ADOR (Company)",
+      0.0015
+    ],
+    [
+      "Pledis Entertainment (Company)",
       0.0015
     ],
     [
@@ -220,76 +255,68 @@
       0.0014
     ],
     [
-      "Riize (Group)",
-      0.0014
+      "Blackpink (Group)",
+      0.0013
     ],
     [
       "Music Bank (Event)",
       0.0013
     ],
     [
-      "T-ara (Group)",
-      0.0013
-    ],
-    [
-      "MBK Entertainment (Company)",
-      0.0013
-    ],
-    [
       "The Show (Event)",
-      0.0012
+      0.0013
     ]
   ],
   "top_brand_by_degree": [
     [
       "Chanel",
-      15
-    ],
-    [
-      "Dior",
-      10
+      11
     ],
     [
       "Celine",
-      10
-    ],
-    [
-      "Louis Vuitton",
-      10
-    ],
-    [
-      "Bulgari",
-      10
-    ],
-    [
-      "Calvin Klein",
       9
     ],
     [
-      "Saint Laurent",
+      "Dior",
+      8
+    ],
+    [
+      "Louis Vuitton",
       8
     ],
     [
       "Prada",
-      8
+      7
     ],
     [
-      "Miu Miu",
-      6
+      "Bulgari",
+      7
     ],
     [
       "Gucci",
       6
+    ],
+    [
+      "Calvin Klein",
+      5
+    ],
+    [
+      "Saint Laurent",
+      5
+    ],
+    [
+      "Miu Miu",
+      5
     ]
   ],
   "top_company_by_degree": [
     [
       "SM Entertainment",
-      62
+      57
     ],
     [
       "YG Entertainment",
-      39
+      37
     ],
     [
       "Hybe",
@@ -308,15 +335,15 @@
       15
     ],
     [
-      "ADOR",
-      9
-    ],
-    [
       "Big Hit Music",
       9
     ],
     [
       "Mnet",
+      8
+    ],
+    [
+      "ADOR",
       8
     ],
     [
@@ -327,31 +354,31 @@
   "top_group_by_degree": [
     [
       "BTS",
-      124
+      118
     ],
     [
       "Blackpink",
-      122
+      108
     ],
     [
       "Stray Kids",
-      98
+      96
     ],
     [
       "Seventeen",
-      89
+      86
     ],
     [
       "Aespa",
-      76
+      73
+    ],
+    [
+      "Le Sserafim",
+      66
     ],
     [
       "Enhypen",
       66
-    ],
-    [
-      "Le Sserafim",
-      65
     ],
     [
       "Twice",
@@ -359,11 +386,11 @@
     ],
     [
       "Ive",
-      61
+      59
     ],
     [
-      "NewJeans",
-      59
+      "Riize",
+      58
     ]
   ],
   "top_artist_by_degree": [
@@ -373,19 +400,19 @@
     ],
     [
       "Lisa",
-      58
+      56
     ],
     [
       "Taylor Swift",
-      53
-    ],
-    [
-      "Rosé",
-      47
+      52
     ],
     [
       "Jung Kook",
-      46
+      49
+    ],
+    [
+      "Rosé",
+      48
     ],
     [
       "G-Dragon",
@@ -393,32 +420,32 @@
     ],
     [
       "IU",
-      44
+      42
     ],
     [
       "Jisoo",
-      35
+      36
     ],
     [
       "V",
-      27
+      26
     ],
     [
       "Taeyeon",
       23
     ]
   ],
-  "louvain_communities": 225,
-  "louvain_modularity": 0.7995168075148599,
+  "louvain_communities": 229,
+  "louvain_modularity": 0.8098141697796067,
   "preprocess": {
     "articles": 33118,
     "articles_en": 10634,
     "sentences": 694132,
-    "mentions": 449986,
-    "articles_with_relations": 10307,
+    "mentions": 457942,
+    "articles_with_relations": 12167,
     "articles_vi": 22484,
-    "member_conflict_dropped": 413,
+    "member_conflict_dropped": 495,
     "dup_articles": 84,
-    "relation_mentions": 29676
+    "relation_mentions": 38072
   }
 }
