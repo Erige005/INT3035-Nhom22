@@ -270,7 +270,9 @@ table(["Loại quan hệ", "Lớp", "Ý nghĩa", "Nguồn → Đích", "Số c�
 p(f"Tổng số cạnh (bộ ba duy nhất nguồn – quan hệ – đích): {fmt(st['edges'])}, gồm {fmt(st['core_edges'])} cạnh "
   f"giữa các nút lõi và {fmt(st['work_edges'])} cạnh nối tới lớp bài hát/album; số loại quan hệ: "
   f"{st['relation_types']}. Quan hệ LEGAL_ACTION (kiện tụng/tranh chấp) đã được xây dựng luật trích xuất nhưng bị "
-  "loại khỏi đồ thị vì độ chính xác trên mẫu chỉ khoảng 51% (mục 8). Thuộc tính cạnh: support (số bài báo khác "
+  "loại khỏi đồ thị vì độ chính xác trên mẫu chỉ khoảng 51% (mục 8). Như vậy, trong nghiệp vụ 'kiện chấm dứt "
+  "hợp đồng' của đề bài, phần 'chấm dứt hợp đồng' vẫn được LEFT_COMPANY đảm nhận (ví dụ NewJeans → ADOR); chỉ "
+  "phần 'kiện' là chưa có trong đồ thị. Thuộc tính cạnh: support (số bài báo khác "
   "nhau làm dẫn chứng), first_date/last_date (ngày bài báo sớm/muộn nhất), langs, sources, evidence_sentences "
   "và evidence_urls (tối đa 3 câu dẫn chứng kèm URL).")
 
@@ -368,9 +370,9 @@ table(["Chỉ số tiền xử lý", "Giá trị"], [
 ], widths=[10, 6])
 
 h("5.1. Trích xuất quan hệ", 2)
-p("Với mỗi câu có ít nhất hai thực thể, hệ thống duyệt 16 luật. Mỗi luật gồm biểu thức trigger song ngữ, "
+p("Với mỗi câu có ít nhất hai thực thể, hệ thống duyệt 15 luật ứng với 15 loại quan hệ của đồ thị. Mỗi luật gồm biểu thức trigger song ngữ, "
   "tập loại nút nguồn và tập loại nút đích. Chủ thể là thực thể đúng loại gần nhất bên trái trigger, đối tượng "
-  "là thực thể đúng loại gần nhất bên phải; với câu bị động ('bị … kiện', 'produced by') chiều được đảo. "
+  "là thực thể đúng loại gần nhất bên phải; với câu bị động ('produced by', 'được … mua lại', 'was acquired by') chiều được đảo. "
   "Khoảng cách giữa hai thực thể không quá 160 ký tự. Riêng MEMBER_OF còn có mẫu cấu trúc độ chính xác cao "
   "đặc trưng của báo chí: 'Jennie (BLACKPINK)' và \"BLACKPINK's Jennie\". Quan hệ COLLABORATED_WITH là đối "
   "xứng. Các lượt trích xuất giống nhau được gộp, support là số bài báo khác nhau.")
@@ -384,7 +386,7 @@ p("Ví dụ truy vấn Cypher:", bold=True)
 for q in [
     "// Các nhãn hàng có nhiều đại sứ K-pop nhất\nMATCH (a)-[r:BRAND_AMBASSADOR]->(b:Brand)\nRETURN b.name, count(a) AS so_dai_su ORDER BY so_dai_su DESC LIMIT 10;",
     "// Mạng lưới quanh HYBE trong 2 bước\nMATCH p=(c:Company {name:'HYBE'})-[*1..2]-(x) RETURN p LIMIT 200;",
-    "// Tranh chấp pháp lý kèm câu dẫn chứng\nMATCH (a)-[r:LEGAL_ACTION]->(b) RETURN a.name, b.name, r.support, r.evidence_sentences[0] ORDER BY r.support DESC;",
+    "// Nghệ sĩ/nhóm rời công ty kèm câu dẫn chứng\nMATCH (a)-[r:LEFT_COMPANY]->(b:Company) RETURN a.name, b.name, r.support, r.evidence_sentences[0] ORDER BY r.support DESC LIMIT 20;",
 ]:
     para = doc.add_paragraph()
     run = para.add_run(q)
@@ -393,6 +395,12 @@ for q in [
 if gds and "error" not in gds:
     p(f"Chạy thử GDS trên Neo4j: Louvain tìm được {gds.get('louvain_communities')} cộng đồng "
       f"(modularity {gds.get('louvain_modularity', 0):.3f}). Top PageRank (có trọng số support):")
+    p("Lưu ý khi so với mục 7: GDS chạy trên phép chiếu vô hướng giữ nguyên cạnh song song (hai thực thể có "
+      "nhiều loại quan hệ được đếm nhiều lần trong bậc), PageRank có trọng số support và chưa chuẩn hóa (giá trị "
+      "khởi đầu 0,15 mỗi nút); NetworkX ở mục 7 dùng đồ thị vô hướng đơn để tính bậc và Louvain, PageRank trên "
+      "đồ thị có hướng không trọng số, chuẩn hóa tổng = 1. Louvain là thuật toán có yếu tố ngẫu nhiên và hai "
+      "đầu vào khác nhau nên số cộng đồng lệch nhau một chút. Vì vậy số liệu hai mục không so trực tiếp được, "
+      "chỉ thứ hạng là tương đồng.", italic=True)
     table(["Thực thể", "Loại", "PageRank", "Bậc"],
           [[x["name"], x["type"], x["pagerank"], x["degree"]] for x in gds.get("top_pagerank", [])[:12]],
           widths=[6, 3, 3, 2])
@@ -435,6 +443,8 @@ p("Phân bố bậc có đuôi dài: phần lớn nút có bậc nhỏ, một s�
   "thước mạng, thể hiện tính small-world.")
 fig("edge_support.png", "Hình 5. Phân bố số bài báo dẫn chứng của mỗi cạnh", 12)
 h("7.1. Các nút trung tâm", 2)
+p("Bậc tính trên đồ thị vô hướng đơn, PageRank chuẩn hóa tổng = 1 (NetworkX), nên khác thang đo với bảng GDS ở "
+  "mục 6.", italic=True)
 table(["Top bậc", "Bậc", "Top PageRank", "PageRank"],
       [[a[0], a[1], b[0], b[1]] for a, b in zip(st["top_degree"][:12], st["top_pagerank"][:12])],
       widths=[5.5, 1.5, 6, 2], size=9.5)

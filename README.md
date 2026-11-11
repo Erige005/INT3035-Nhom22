@@ -77,8 +77,8 @@ cd .. && sh report/make_report.sh
 ```cypher
 // Nhãn hàng có nhiều đại sứ nhất
 MATCH (a)-[:BRAND_AMBASSADOR]->(b:Brand) RETURN b.name, count(a) AS n ORDER BY n DESC LIMIT 10;
-// Tranh chấp pháp lý kèm câu dẫn chứng
-MATCH (a)-[r:LEGAL_ACTION]->(b) RETURN a.name, b.name, r.support, r.evidence_sentences[0] ORDER BY r.support DESC;
+// Nghệ sĩ/nhóm rời công ty kèm câu dẫn chứng
+MATCH (a)-[r:LEFT_COMPANY]->(b:Company) RETURN a.name, b.name, r.support, r.evidence_sentences[0] ORDER BY r.support DESC LIMIT 20;
 ```
 
 ## Hạn chế
